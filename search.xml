@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于东京的天气...</title>
+      <link href="/2023/05/25/2-tokyounotenki/"/>
+      <url>/2023/05/25/2-tokyounotenki/</url>
+      
+        <content type="html"><![CDATA[<h1 id="東京都の天気"><a href="#東京都の天気" class="headerlink" title="東京都の天気"></a>東京都の天気</h1><h3 id="据我到东京这么长时间以来的观察，东京的天气大概只有两种…"><a href="#据我到东京这么长时间以来的观察，东京的天气大概只有两种…" class="headerlink" title="据我到东京这么长时间以来的观察，东京的天气大概只有两种…"></a>据我到东京这么长时间以来的观察，东京的天气大概只有两种…</h3><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p><img src="https://img.514.live/img/202305252004824.png"><br>一种是这样的，很凉快，很好看，风不算大。</p><h2 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h2><p><img src="https://img.514.live/img/tokyounotenki2.png"><br>另一种就是这样的，相当的亮，风特别特别大，但是也不怎么热。</p><p><del>其实最大的特点是云动的特别快</del></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>你好，世界！</title>
+      <link href="/2023/05/23/1-hello,world!/"/>
+      <url>/2023/05/23/1-hello,world!/</url>
+      
+        <content type="html"><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;new post&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 建站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
