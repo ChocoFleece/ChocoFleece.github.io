@@ -6704,6 +6704,11 @@ h1.page-title + .tag-cloud-list {
   -ms-animation: slide-in 0.6s 0.3s backwards;
   animation: slide-in 0.6s 0.3s backwards;
 }
+@media screen and (max-width: 1400px) {
+  #page-header #post-info {
+    padding: 0 12%;
+  }
+}
 @media screen and (max-width: 768px) {
   #page-header #post-info {
     padding: 11rem 6% 0;
