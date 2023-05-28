@@ -54,7 +54,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '23年05月28日 18:15:49'
+  postUpdate: '23年05月28日 18:20:11'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -340,7 +340,7 @@ queueMicrotask(() => {
     let currentTimeHtml = "";
     if (nowHour < 18 && nowHour >= 9) {
       // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
-      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+      currentTimeHtml = `本站已经安全运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span>;
     } else {
       // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
       let img = document.querySelector("#workboard .workSituationImg");
