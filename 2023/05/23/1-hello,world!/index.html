@@ -902,7 +902,7 @@ function stopMaskScroll() {
         rm.hideRightMenu();
         // e.preventDefault();
       },
-      false
+      { passive: true }
     );
   }
   if (document.getElementById("rightMenu")) {
@@ -914,7 +914,7 @@ function stopMaskScroll() {
         rm.hideRightMenu();
         // e.preventDefault();
       },
-      false
+      { passive: true }
     );
   }
 }
@@ -1096,7 +1096,7 @@ function addRightMenuClickEvent() {
   });
 
   document.getElementById("menu-newwindow").addEventListener("click", function () {
-    window.open(domhref);
+    window.open(domhref, "_blank");
     rm.hideRightMenu();
   });
 
@@ -1107,7 +1107,7 @@ function addRightMenuClickEvent() {
   });
 
   document.getElementById("menu-newwindowimg").addEventListener("click", function () {
-    window.open(domImgSrc);
+    window.open(domImgSrc, "_blank");
     rm.hideRightMenu();
   });
 

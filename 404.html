@@ -54,7 +54,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '23年05月28日 18:47:21'
+  postUpdate: '23年05月31日 22:30:11'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -851,7 +851,7 @@ function stopMaskScroll() {
         rm.hideRightMenu();
         // e.preventDefault();
       },
-      false
+      { passive: true }
     );
   }
   if (document.getElementById("rightMenu")) {
@@ -863,7 +863,7 @@ function stopMaskScroll() {
         rm.hideRightMenu();
         // e.preventDefault();
       },
-      false
+      { passive: true }
     );
   }
 }
@@ -1045,7 +1045,7 @@ function addRightMenuClickEvent() {
   });
 
   document.getElementById("menu-newwindow").addEventListener("click", function () {
-    window.open(domhref);
+    window.open(domhref, "_blank");
     rm.hideRightMenu();
   });
 
@@ -1056,7 +1056,7 @@ function addRightMenuClickEvent() {
   });
 
   document.getElementById("menu-newwindowimg").addEventListener("click", function () {
-    window.open(domImgSrc);
+    window.open(domImgSrc, "_blank");
     rm.hideRightMenu();
   });
 
