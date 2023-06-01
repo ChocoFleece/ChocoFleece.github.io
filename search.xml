@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>「一」Python3笔记</title>
+      <link href="/2023/06/01/3-PythonNotes1/"/>
+      <url>/2023/06/01/3-PythonNotes1/</url>
+      
+        <content type="html"><![CDATA[<p><strong>前言：本文仅针对Windows11环境下，使用VSCode编辑器进行基础的Python3的学习、练习。出现问题请先检查自己的系统版本与软件版本。</strong></p><hr><h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h2 id="检查电脑是否已有Python环境"><a href="#检查电脑是否已有Python环境" class="headerlink" title="检查电脑是否已有Python环境"></a>检查电脑是否已有Python环境</h2><p>使用快捷键 <em><strong>Windows+R</strong></em> ，输入 <em><strong>wt</strong></em> ，回车进入<strong>Windows Terminal</strong>，选择打开 <strong>「命令提示符」</strong></p><p>输入指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure><p>如下图所示提示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Python 3.11.3</span><br></pre></td></tr></table></figure><p><img src="https://img.514.live/img/20230601183545.png"></p><p>即表明你的电脑存在版本号为3.11.3的Python环境。</p><p>此时请注意观察版本号，Python2与2020年就停止了更新，<strong>请务必使用Python3进行学习，因为Python3与Python2的语法有一定区别</strong>。</p><p>如果发现拥有Python3.5以前的版本，都建议进行更新，最简单的方法就是直接完全卸载当前的旧版本Python，再重新安装最新的Python3版本。</p><p>截止至本文发布时，博主已知的Python3最新版本号为<strong>3.11.3</strong>。</p><h2 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h2><p>这里只推荐两种安装方式</p><h3 id="Microsoft-Store安装"><a href="#Microsoft-Store安装" class="headerlink" title="Microsoft Store安装"></a>Microsoft Store安装</h3><p><img src="https://img.514.live/img/202306011853581.png"></p><p>在微软商店中搜索Python3，寻找到最新的版本(例如3.11)进行安装即可。</p><h3 id="官网安装"><a href="#官网安装" class="headerlink" title="官网安装"></a>官网安装</h3><p>进入<a href="https://www.python.org/downloads/">Python官网</a>，点击如下图所示的<strong>Download Python 3.xx.x</strong></p><p><img src="https://img.514.live/img/202306011903942.png"></p><p>下载完成后运行下载下来的文件，依照需求安装即可，请不要忘记配置环境变量。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>摆烂，VSCode内随便点点就行了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 研究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 研究 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于东京的天气...</title>
       <link href="/2023/05/25/2-tokyounotenki/"/>
       <url>/2023/05/25/2-tokyounotenki/</url>
