@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>「二」Python3笔记</title>
+      <link href="/2023/06/04/4-PythonNotes2/"/>
+      <url>/2023/06/04/4-PythonNotes2/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>前言：本文仅针对Windows11环境下，使用VSCode编辑器进行基础的Python3的学习、练习。出现问题请先检查自己的系统版本与软件版本。</p></blockquote><hr><h1 id="Python3简介"><a href="#Python3简介" class="headerlink" title="Python3简介"></a>Python3简介</h1><h4 id="Python是一种解释型，交互式，面向对象语言"><a href="#Python是一种解释型，交互式，面向对象语言" class="headerlink" title="Python是一种解释型，交互式，面向对象语言"></a>Python是一种<strong>解释型</strong>，<strong>交互式</strong>，<strong>面向对象语言</strong></h4><p>解释型：无需进行编译，直接通过解释器解释</p><p>交互式：可以在Python命令行中直接执行代码</p><p>面向对象：这意味着Python支持面向对象的风格或代码封装在对象的编程技术</p><h1 id="Python3保留字"><a href="#Python3保留字" class="headerlink" title="Python3保留字"></a>Python3保留字</h1><h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>默认情况下，Python 3 源码文件以 <strong>UTF-8</strong> 编码，所有字符串都是 Unicode 字符串</p><blockquote><p><strong>简体中文</strong>语言环境的<strong>Windows系统</strong>下，命令提示符的默认编码为<strong>GBK</strong>，而非<strong>UTF-8</strong>，因此请务必使用<strong>VSCode</strong>等<strong>专业代码工具</strong>进行代码编写，<strong>而非记事本</strong>！</p></blockquote><p><strong>值得注意</strong>的是：你可以在<strong>代码前</strong>添加<strong>声明</strong>来修改解释器对于本文件<strong>默认使用的编码</strong>，如下表示使用<strong>GBK编码</strong>进行解释。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#coding=gbk</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 研究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 研究 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>「一」Python3笔记</title>
       <link href="/2023/06/01/3-PythonNotes1/"/>
       <url>/2023/06/01/3-PythonNotes1/</url>
       
-        <content type="html"><![CDATA[<p><strong>前言：本文仅针对Windows11环境下，使用VSCode编辑器进行基础的Python3的学习、练习。出现问题请先检查自己的系统版本与软件版本。</strong></p><hr><h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h2 id="检查电脑是否已有Python环境"><a href="#检查电脑是否已有Python环境" class="headerlink" title="检查电脑是否已有Python环境"></a>检查电脑是否已有Python环境</h2><p>使用快捷键 <strong>Windows+R</strong> ，输入 <strong>wt</strong> ，回车进入<strong>Windows Terminal</strong>，选择打开 <strong>「命令提示符」</strong></p><p>输入指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure><p>如下图所示提示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Python 3.11.3</span><br></pre></td></tr></table></figure><p><img src="https://img.514.live/img/20230601183545.png"></p><p>即表明你的电脑存在版本号为3.11.3的Python环境。</p><p>此时请注意观察版本号，Python2与2020年就停止了更新，<strong>请务必使用Python3进行学习，因为Python3与Python2的语法有一定区别</strong>。</p><p>如果发现拥有Python3.5以前的版本，都建议进行更新，最简单的方法就是直接完全卸载当前的旧版本Python，再重新安装最新的Python3版本。</p><p>截止至本文发布时，博主已知的Python3最新版本号为<strong>3.11.3</strong>。</p><h2 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h2><p>这里只推荐两种安装方式</p><h3 id="Microsoft-Store安装"><a href="#Microsoft-Store安装" class="headerlink" title="Microsoft Store安装"></a>Microsoft Store安装</h3><p><img src="https://img.514.live/img/202306011853581.png"></p><p>在微软商店中搜索Python3，寻找到最新的版本(例如3.11)进行安装即可。</p><h3 id="官网安装"><a href="#官网安装" class="headerlink" title="官网安装"></a>官网安装</h3><p>进入<a href="https://www.python.org/downloads/">Python官网</a>，点击如下图所示的<strong>Download Python 3.xx.x</strong></p><p><img src="https://img.514.live/img/202306011903942.png"></p><p>下载完成后运行下载下来的文件，依照需求安装即可，请不要忘记配置环境变量。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>摆烂，VSCode内随便点点就行了</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>前言：本文仅针对Windows11环境下，使用VSCode编辑器进行基础的Python3的学习、练习。出现问题请先检查自己的系统版本与软件版本。</p></blockquote><hr><h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h3 id="检查电脑是否已有Python环境"><a href="#检查电脑是否已有Python环境" class="headerlink" title="检查电脑是否已有Python环境"></a>检查电脑是否已有Python环境</h3><p>使用快捷键 <strong>Windows+R</strong> ，输入 <strong>wt</strong> ，回车进入<strong>Windows Terminal</strong>，选择打开 <strong>「命令提示符」</strong></p><p>输入指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure><p>如下图所示提示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Python 3.11.3</span><br></pre></td></tr></table></figure><p><img src="https://img.514.live/img/20230601183545.png"></p><p>即表明你的电脑存在版本号为3.11.3的Python环境。</p><p>此时请注意观察版本号，Python2与2020年就停止了更新，<strong>请务必使用Python3进行学习，因为Python3与Python2的语法有一定区别</strong>。</p><p>如果发现拥有Python3.5以前的版本，都建议进行更新，最简单的方法就是直接完全卸载当前的旧版本Python，再重新安装最新的Python3版本。</p><p>截止至本文发布时，博主已知的Python3最新版本号为<strong>3.11.3</strong>。</p><h2 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h2><p>这里只推荐两种安装方式</p><h3 id="Microsoft-Store安装"><a href="#Microsoft-Store安装" class="headerlink" title="Microsoft Store安装"></a>Microsoft Store安装</h3><p><img src="https://img.514.live/img/202306011853581.png"></p><p>在微软商店中搜索Python3，寻找到最新的版本(例如3.11)进行安装即可。</p><h3 id="官网安装"><a href="#官网安装" class="headerlink" title="官网安装"></a>官网安装</h3><p>进入<a href="https://www.python.org/downloads/">Python官网</a>，点击如下图所示的<strong>Download Python 3.xx.x</strong></p><p><img src="https://img.514.live/img/202306011903942.png"></p><p>下载完成后运行下载下来的文件，依照需求安装即可，请不要忘记配置环境变量。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>摆烂，VSCode内随便点点就行了</p>]]></content>
       
       
       <categories>
