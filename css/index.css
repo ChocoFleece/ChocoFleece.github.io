@@ -2987,7 +2987,6 @@ figure.highlight pre .javascript .function {
   #body-wrap #category,
   #body-wrap #tag {
     padding: 40px 15px 20px;
-    background: var(--anzhiyu-background);
   }
   #body-wrap #archive {
     background: var(--anzhiyu-background);
@@ -4871,6 +4870,20 @@ span.categoryes-punctuation .icon-biaoqian {
 .post-meta__box__category-list a:nth-child(5n + 4) {
   background-color: #ff5e5c;
   color: #fff;
+}
+body[data-type="tags"] #page {
+  border-radius: 12px;
+}
+@media screen and (max-width: 768px) {
+  body[data-type="tags"] #page #tag {
+    padding: 0px 15px 20px;
+  }
+  body[data-type="tags"] #page .page-title {
+    margin: 8px 0 0px;
+  }
+}
+body[data-type="tags"] #body-wrap .layout {
+  padding: 20px 15px;
 }
 body[data-type="tags"] #tag #tag-page-tags {
   -webkit-box-pack: center;
@@ -7829,6 +7842,8 @@ h1.page-title + .tag-cloud-list {
   border: var(--style-border-always);
   background: var(--anzhiyu-card-bg);
   font-size: 14px;
+  height: 4.2rem;
+  width: 7rem;
 }
 #sidebar .menus_item ul {
   padding-left: 0px;
@@ -16735,6 +16750,9 @@ a.catalog-more:hover {
   /* 浅色模式样式 */
 }
 @media screen and (max-width: 768px) {
+  #catalog-bar i {
+    margin-right: 5px;
+  }
   #categoryBar {
     margin-bottom: 0;
     position: -webkit-sticky;
@@ -18979,6 +18997,20 @@ svg.icon.faa-tada {
 #page:has(#lib-cards):has(#libCategories) #post-comment .tk-comments-container > .tk-comment {
   border: none;
   box-shadow: none;
+}
+@media screen and (max-width: 768px) {
+  #libCategories {
+    margin-top: 0 !important;
+  }
+  #page:has(#lib-cards):has(#libCategories) h1.page-title {
+    margin-bottom: 0;
+  }
+  body[data-type="categories"] #body-wrap .layout {
+    padding: 20px 15px;
+  }
+  body[data-type="categories"] #body-wrap #category {
+    padding: 20px 15px 20px;
+  }
 }
 
 .card-glass .card-background {
