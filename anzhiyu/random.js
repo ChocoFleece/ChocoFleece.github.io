@@ -1,1 +1,1 @@
-var posts=["2023/05/23/1-hello,world!/","2023/06/01/3-PythonNotes1/","2023/05/25/2-tokyounotenki/","2023/06/05/5-PythonNotes3/","2023/06/04/4-PythonNotes2/","2023/06/05/6-PythonNotes4/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/06/01/3-PythonNotes1/","2023/05/25/2-tokyounotenki/","2023/05/23/1-hello,world!/","2023/06/04/4-PythonNotes2/","2023/06/05/5-PythonNotes3/","2023/06/05/6-PythonNotes4/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
