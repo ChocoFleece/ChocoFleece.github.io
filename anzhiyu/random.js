@@ -1,1 +1,1 @@
-var posts=["2023/05/23/1-hello,world!/","2023/05/25/2-tokyounotenki/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["archives/2023/1-hello,world!/","archives/2023/2-tokyounotenki/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
