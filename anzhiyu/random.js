@@ -1,1 +1,0 @@
-var posts=["archives/2023/1-hello,world!/","archives/2023/2-tokyounotenki/","archives/2023/3-linuxobscapture/","archives/2023/4-efbwechattg/","archives/2023/5-linuxobsbrowser/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
