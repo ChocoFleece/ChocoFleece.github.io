@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>你好，世界！</title>
+    <url>/2023/05/23/hello,world!/</url>
+    <content><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p>
+<p>Front-matter示例：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你好，世界！</span><br><span class="line"><span class="built_in">date</span>: 2023-05-23 20:57:13</span><br><span class="line">updated: 2023-05-23 20:57:13</span><br><span class="line">tags: </span><br><span class="line">    - <span class="string">&quot;建站&quot;</span></span><br><span class="line">categories: </span><br><span class="line">    - <span class="string">&quot;建站&quot;</span></span><br><span class="line">description: 建站时，测试用的文章</span><br><span class="line">thumbnail: /images/default_cover.webp  <span class="comment">#首页缩略图、文章头图</span></span><br><span class="line"><span class="comment"># expires: 2023-08-31 23:59:59  #超过本时间提示文章可能过时</span></span><br><span class="line"><span class="comment"># excerpt: &quot;这里是显示的摘要，可不填，自动生成&quot;</span></span><br><span class="line"><span class="comment"># sticky: 1 #数字越大文章越靠前</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>微信与TG互通 基于EFB的ComWechat搭建教程</title>
     <url>/2023/10/04/efbwechattg/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
@@ -144,17 +158,30 @@
       </tags>
   </entry>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2023/05/23/hello,world!/</url>
-    <content><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p>
-<p>Front-matter示例：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你好，世界！</span><br><span class="line"><span class="built_in">date</span>: 2023-05-23 20:57:13</span><br><span class="line">updated: 2023-05-23 20:57:13</span><br><span class="line">tags: </span><br><span class="line">    - <span class="string">&quot;建站&quot;</span></span><br><span class="line">categories: </span><br><span class="line">    - <span class="string">&quot;建站&quot;</span></span><br><span class="line">description: 建站时，测试用的文章</span><br><span class="line">thumbnail: /images/default_cover.webp  <span class="comment">#首页缩略图、文章头图</span></span><br><span class="line"><span class="comment"># expires: 2023-08-31 23:59:59  #超过本时间提示文章可能过时</span></span><br><span class="line"><span class="comment"># excerpt: &quot;这里是显示的摘要，可不填，自动生成&quot;</span></span><br><span class="line"><span class="comment"># sticky: 1 #数字越大文章越靠前</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+    <title>ArchLinux下安装带浏览器源的OBS</title>
+    <url>/2023/10/12/linuxobsbrowser/</url>
+    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
+<p>在ArchLinux下通过pacman安装的obs-studio软件包默认是不在<strong>来源</strong>页包含<strong>浏览器</strong>源的选项支持的。而我们需要用到的时候就需要为OBS添加浏览器源的支持。<br>虽然默认的obs-studio包不提供这个插件，但可以通过其他客户端或插件包添加。</p>
+</blockquote>
+<h3 id="推荐方案1"><a href="#推荐方案1" class="headerlink" title="推荐方案1"></a><strong>推荐方案1</strong></h3><p>安装使用<a class="link"   href="https://github.com/obsproject/obs-browser" >浏览器插件<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>进行编译的官方包。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="推荐方案2"><a href="#推荐方案2" class="headerlink" title="推荐方案2"></a><strong>推荐方案2</strong></h3><p>这是一款定制的客户端，提供浏览器插件以及浏览器停靠栏，还有其他改进。不过如果能够满足自己的需求的话，依然是官方包最佳。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-tytan652</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="不推荐方案"><a href="#不推荐方案" class="headerlink" title="不推荐方案"></a><strong>不推荐方案</strong></h3><p>打包的支持浏览器插件集成的OBS</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#任选</span><br><span class="line">yay -S obs-studio-browser</span><br><span class="line">yay -S obs-linuxbrowser</span><br></pre></td></tr></table></figure></div>
+
+<p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
+<p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
+<p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>研究</category>
       </categories>
       <tags>
-        <tag>建站</tag>
+        <tag>研究</tag>
       </tags>
   </entry>
   <entry>
@@ -212,33 +239,6 @@
 <p>将需要捕获的应用与 <strong>JACK输入</strong> 相连，此时OBS中 <strong>JACK 输入客户端</strong> 将捕获到被连接的应用音频。</p>
 <p>缺点：每次需要手动配置，但可以通过开机执行一些指令，或添加一些配置文件来固化这个操作。<br>优点：没有其他解决方案时的万能解，紧急情况没有安装插件的救济措施，以及也许<strong>可能更低</strong>的音频延迟</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我个人还是推荐方案一，简单好用，也能够满足大部分情况了。<br>至于方案二，留作一个备用的应急解决方案好了，当然如果你有强烈的强迫症或者奇怪的精神洁癖，你可以考虑深入研究一下…</p>
-]]></content>
-      <categories>
-        <category>研究</category>
-      </categories>
-      <tags>
-        <tag>研究</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ArchLinux下安装带浏览器源的OBS</title>
-    <url>/2023/10/12/linuxobsbrowser/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
-<p>在ArchLinux下通过pacman安装的obs-studio软件包默认是不在<strong>来源</strong>页包含<strong>浏览器</strong>源的选项支持的。而我们需要用到的时候就需要为OBS添加浏览器源的支持。<br>虽然默认的obs-studio包不提供这个插件，但可以通过其他客户端或插件包添加。</p>
-</blockquote>
-<h3 id="推荐方案1"><a href="#推荐方案1" class="headerlink" title="推荐方案1"></a><strong>推荐方案1</strong></h3><p>安装使用<a class="link"   href="https://github.com/obsproject/obs-browser" >浏览器插件<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>进行编译的官方包。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="推荐方案2"><a href="#推荐方案2" class="headerlink" title="推荐方案2"></a><strong>推荐方案2</strong></h3><p>这是一款定制的客户端，提供浏览器插件以及浏览器停靠栏，还有其他改进。不过如果能够满足自己的需求的话，依然是官方包最佳。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-tytan652</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="不推荐方案"><a href="#不推荐方案" class="headerlink" title="不推荐方案"></a><strong>不推荐方案</strong></h3><p>打包的支持浏览器插件集成的OBS</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#任选</span><br><span class="line">yay -S obs-studio-browser</span><br><span class="line">yay -S obs-linuxbrowser</span><br></pre></td></tr></table></figure></div>
-
-<p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
-<p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
-<p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 ]]></content>
       <categories>
         <category>研究</category>
