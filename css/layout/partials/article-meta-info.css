@@ -139,320 +139,67 @@
   --redefine-box-shadow-flat-hover: var(--shadow-color-2) 0px 1px 4px 0px, var(--shadow-color-1) 0px 0px 0px 1px, var(--shadow-color-1) 0px 0px 0px 1px inset;
   --mermaid-theme: $dark-mermaid-theme;
 }
-.title-hover-animation {
-  display: inline-block;
-  position: relative;
-  border-bottom: none;
-  line-height: 1.3;
-  vertical-align: top;
-  color: var(--second-text-color);
+.article-meta-info {
+  font-size: 0.8rem;
+  color: var(--third-text-color);
 }
-.title-hover-animation::before {
-  content: '';
+.article-meta-info .article-meta-item {
+  margin-right: 10px;
+}
+.article-meta-info .article-meta-item:last-child {
+  margin-right: 0;
+}
+.article-meta-info .article-date {
+  position: relative;
+}
+.article-meta-info .article-date .hover-info {
+  opacity: 0;
   position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: var(--second-text-color);
-  visibility: hidden;
-  transform: scaleX(0);
-  transition-property: color, background, box-shadow, border-color, visibility, transform;
-  transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
-  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
-  transition-timing-function: ease, ease, ease, ease, ease-in-out, ease-in-out;
+  transition: opacity 0.3s;
+  top: 1.5rem;
+  left: 50%;
+  width: auto;
+  transform: translateX(-50%);
+  border: 1px solid var(--border-color);
+  padding: 0 5px;
+  border-radius: 9px;
+  background-color: var(--second-background-color);
 }
-@-moz-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.article-meta-info .article-date:hover .hover-info {
+  opacity: 1;
+  transition: opacity 0.2s;
 }
-@-webkit-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-o-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@-moz-keyframes icon-animate {
-  0%, 100% {
-    transform: scale(1);
-  }
-  10%, 30% {
-    transform: scale(0.88);
-  }
-  20%, 40%, 60%, 80% {
-    transform: scale(1.08);
-  }
-  50%, 70% {
-    transform: scale(1.08);
-  }
-}
-@-webkit-keyframes icon-animate {
-  0%, 100% {
-    transform: scale(1);
-  }
-  10%, 30% {
-    transform: scale(0.88);
-  }
-  20%, 40%, 60%, 80% {
-    transform: scale(1.08);
-  }
-  50%, 70% {
-    transform: scale(1.08);
-  }
-}
-@-o-keyframes icon-animate {
-  0%, 100% {
-    transform: scale(1);
-  }
-  10%, 30% {
-    transform: scale(0.88);
-  }
-  20%, 40%, 60%, 80% {
-    transform: scale(1.08);
-  }
-  50%, 70% {
-    transform: scale(1.08);
-  }
-}
-@keyframes icon-animate {
-  0%, 100% {
-    transform: scale(1);
-  }
-  10%, 30% {
-    transform: scale(0.88);
-  }
-  20%, 40%, 60%, 80% {
-    transform: scale(1.08);
-  }
-  50%, 70% {
-    transform: scale(1.08);
-  }
-}
-.redefine-box-shadow {
-  box-shadow: var(--redefine-box-shadow);
-}
-.redefine-box-shadow-flat {
-  box-shadow: var(--redefine-box-shadow-flat);
-}
-@media (min-width: 640px) {
-  .redefine-box-shadow:hover {
-    box-shadow: var(--redefine-box-shadow-hover);
-  }
-  .redefine-box-shadow-flat:hover {
-    box-shadow: var(--redefine-box-shadow);
-  }
-}
-.ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-* {
-  transition-property: color, background, box-shadow, border-color;
-  transition-delay: 0s, 0s, 0s, 0s;
-  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
-  transition-timing-function: ease, ease, ease, ease;
-}
-html,
-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  color: var(--default-text-color);
-  background: var(--background-color);
-  font-family: Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  --navbar-height: 70px;
-}
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  width: 14px;
-  height: 8px;
-  transition: all 0.2s ease;
-  display: block;
-}
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-color);
-  border-radius: 18px;
-  background-clip: content-box;
-  border: 3px solid transparent;
-}
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track {
-  background-color: var(--scroll-bar-bg-color);
-  border: 1px solid var(--shadow-color-1);
-}
-html::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-color-hover);
-  border-radius: 18px;
-  background-clip: content-box;
-  border: 3px solid transparent;
+.article-meta-info .article-date .mobile {
+  display: none;
 }
 @media (max-width: 768px) {
-  html,
-  body {
-    font-size: 15.36px;
-    line-height: 1.44;
+  .article-meta-info .article-date .desktop {
+    display: none;
+  }
+  .article-meta-info .article-date .mobile {
+    display: inline;
   }
 }
-@media (max-width: 640px) {
-  html,
-  body {
-    font-size: 14.4px;
-    line-height: 1.35;
-  }
+.article-meta-info .article-tags,
+.article-meta-info .article-categories {
+  display: inline;
 }
-html .navbar-shrink,
-body .navbar-shrink {
-  --navbar-height: 50.4px;
+.article-meta-info .article-tags ul,
+.article-meta-info .article-categories ul,
+.article-meta-info .article-tags li,
+.article-meta-info .article-categories li {
+  display: inline;
 }
-::selection {
-  background: var(--selection-color);
-  color: #fff;
+.article-meta-info .article-tags a,
+.article-meta-info .article-categories a {
+  color: var(--third-text-color);
 }
-ul,
-ol,
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: var(--default-text-color);
-}
-a i,
-a span {
-  color: var(--default-text-color);
-}
-a:hover,
-a:active {
-  text-decoration: none !important;
+.article-meta-info .article-tags a:hover,
+.article-meta-info .article-categories a:hover {
   color: var(--primary-color);
-}
-a:hover i,
-a:active i,
-a:hover span,
-a:active span {
-  color: var(--primary-color);
-}
-img[lazyload] {
-  padding: 10px;
-  margin: 20px auto !important;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-button {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  background: transparent;
-}
-.btn {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  white-space: nowrap;
-  padding: 8px 16px;
-  background-color: var(--second-background-color) !important;
-  border-radius: 14px !important;
-  padding: 12px 16px !important;
-  text-decoration: none !important;
-  padding: 0;
-  border-radius: 18px;
-  box-sizing: border-box;
-  background: var(--background-color);
-  margin-bottom: 1rem;
-  box-shadow: var(--redefine-box-shadow);
-  box-shadow: var(--redefine-box-shadow-flat) !important;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  box-shadow: var(--redefine-box-shadow);
-  transition-property: color, background, box-shadow, border-color, transform;
-  transition-delay: 0s, 0s, 0s, 0s, 0s;
-  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
-  transition-timing-function: ease, ease, ease, ease, linear;
 }
 @media (max-width: 768px) {
-  .btn {
-    margin-bottom: 0.8rem;
+  .article-meta-info .article-tags {
+    display: none;
   }
-}
-@media (max-width: 640px) {
-  .btn {
-    margin-bottom: 0.6rem;
-  }
-}
-.btn:hover {
-  box-shadow: var(--redefine-box-shadow-hover);
-}
-@media (max-width: 768px) {
-  .btn {
-    padding: -4;
-    border-radius: 18px;
-  }
-}
-@media (max-width: 640px) {
-  .btn {
-    padding: -8;
-    border-radius: 18px;
-  }
-}
-.btn:hover {
-  box-shadow: var(--redefine-box-shadow-hover);
-}
-.btn:hover,
-.btn:focus {
-  color: var(--primary-color);
-  background-color: var(--background-color) !important;
-  box-shadow: var(--redefine-box-shadow) !important;
-}
-.btn:active {
-  box-shadow: var(--redefine-box-shadow-flat) !important;
-  transform: scale(0.95);
-  transition: transform 0.1s ease;
-  background-color: var(--third-background-color) !important;
-}
-.clear {
-  clear: both;
 }
