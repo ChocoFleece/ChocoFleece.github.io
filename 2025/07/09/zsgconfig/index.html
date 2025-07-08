@@ -123,7 +123,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://514.live/2023/10/03/linuxobscapture/"/>
+    <link rel="canonical" href="http://514.live/2025/07/09/zsgconfig/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -133,14 +133,14 @@
         
         <meta name="description" content="「巧克力空间站」|「光阴似箭，日月如梭」">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArchLinux下OBS捕获单应用音频的解决方案">
-<meta property="og:url" content="http://514.live/2023/10/03/linuxobscapture/index.html">
+<meta property="og:title" content="如何配置一个简单实用且干净的zsh">
+<meta property="og:url" content="http://514.live/2025/07/09/zsgconfig/index.html">
 <meta property="og:site_name" content="「巧克力空间站」">
 <meta property="og:description" content="「巧克力空间站」|「光阴似箭，日月如梭」">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://514.live/images/udonge.webp">
-<meta property="article:published_time" content="2023-10-03T08:22:00.000Z">
-<meta property="article:modified_time" content="2023-10-03T08:22:00.000Z">
+<meta property="article:published_time" content="2025-07-09T01:47:00.000Z">
+<meta property="article:modified_time" content="2025-07-09T01:47:00.000Z">
 <meta property="article:author" content="ChocoFleece">
 <meta property="article:tag" content="研究">
 <meta name="twitter:card" content="summary">
@@ -156,7 +156,7 @@
     
     <title>
         
-            ArchLinux下OBS捕获单应用音频的解决方案 | 「巧克力空间站」
+            如何配置一个简单实用且干净的zsh | 「巧克力空间站」
         
     </title>
 
@@ -748,10 +748,10 @@
 			
 			
 			
-			<img src="https://img.514.live/img/helvum.png" alt="ArchLinux下OBS捕获单应用音频的解决方案" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			<img src="/images/zsh.png" alt="如何配置一个简单实用且干净的zsh" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
 			
 			<div class="w-full flex items-center absolute bottom-0 justify-start">
-				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">ArchLinux下OBS捕获单应用音频的解决方案</h1>
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">如何配置一个简单实用且干净的zsh</h1>
 			</div>
 			
 		</div>
@@ -770,15 +770,15 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-10-03 08:22</span>
-        <span class="mobile">2023-10-03 08:22</span>
+        <span class="desktop">2025-07-09 01:47</span>
+        <span class="mobile">2025-07-09 01:47</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-10-03 08:22</span>
-            <span class="mobile">2023-10-03 08:22</span>
+            <span class="desktop">2025-07-09 01:47</span>
+            <span class="mobile">2025-07-09 01:47</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -816,12 +816,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.3k 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>422 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 分钟</span>
         </span>
     
     
@@ -840,58 +840,45 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
-<p>起因十分简单，我在几个月前转用ArchLinux作为主力系统使用，逐渐适应并喜爱上了Linux生态。然而Linux常常处于不被消费级软件重视的地位，这使得很多时候我们需要自己解决问题。比如我试图在Linux下直播我的游戏，但是同时我又要和朋友语音通话，为了不录入我自己和朋友的声音到直播中 <del class="mask">社恐.gif</del> 我开始按照Windows的思路试图捕获单个应用音频，此时我发现这项功能仅仅在Windows版本的OBS中进行测试，而Linux下是没有这个功能的，经过一番探索和交流，获得了两个比较泛用的方案。</p>
-</blockquote>
-<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>下面来介绍一下我的ArchLinux环境<br>N卡、最新系统、AMD的CPU等等，这些不需要提，也不相关的内容。桌面环境KDE，渲染用的X11，这些有一点关系，但不大。<br><strong>音频系统Pipewire</strong>，这个很重要，因为<strong>本文仅针对Pipewire生效</strong>。</p>
-<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><p>一共有两种方案，下面我来分别介绍一下。</p>
+			<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文可以让我仅配置三个简单的功能插件</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先安装 <strong>zsh</strong> 并切换默认 Shell 至 <strong>&#x2F;bin&#x2F;zsh</strong></p>
 <blockquote>
-<p>我个人是比较推荐<strong>方案一</strong>的，两种方案各有优缺点，下面将详细说明。</p>
+<p>可通过<code> chsh -l</code>查看所有可用的 Shell</p>
 </blockquote>
-<h2 id="方案一-OBS插件"><a href="#方案一-OBS插件" class="headerlink" title="方案一 OBS插件"></a>方案一 OBS插件</h2><blockquote>
-<p>使用Github开源的OBS插件<a target="_blank" rel="noopener" href="https://github.com/dimtpap/obs-pipewire-audio-capture"><strong>obs-pipewire-audio-capture</strong></a></p>
-</blockquote>
-<p>这种方案的优点是配置简单，缺点则是可能随着某次音频驱动的更新，该方案失效，当然可能性微乎其微，同时插件肯定也会跟进更新，因此基本没有什么缺点。</p>
-<h3 id="环境需求"><a href="#环境需求" class="headerlink" title="环境需求"></a>环境需求</h3><h3 id="1-WirePlumber"><a href="#1-WirePlumber" class="headerlink" title="1. WirePlumber"></a><strong>1. WirePlumber</strong></h3><p>ArchLinux下安装WirePlumber的命令</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S wireplumber</span><br></pre></td></tr></table></figure></div>
+<p>若安装了 <strong>oh-my-zsh</strong> 请先卸载</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uninstall_oh_my_zsh</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="编辑-zshrc"><a href="#编辑-zshrc" class="headerlink" title="编辑 .zshrc"></a>编辑 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">### ZSH HOME</span><br><span class="line">export ZSH=$HOME/.zsh</span><br><span class="line"></span><br><span class="line">### ---- history config ----------</span><br><span class="line">export HISTFILE=$ZSH/.zsh_history</span><br><span class="line"></span><br><span class="line"># How many commands zsh will load to memory.</span><br><span class="line">export HISTSIZE=10000</span><br><span class="line"></span><br><span class="line"># How maney commands history will save on file.</span><br><span class="line">export SAVEHIST=10000</span><br><span class="line"></span><br><span class="line"># History won&#x27;t save duplicates.</span><br><span class="line">setopt HIST_IGNORE_ALL_DUPS</span><br><span class="line"></span><br><span class="line"># History won&#x27;t show duplicates on search.</span><br><span class="line">setopt HIST_FIND_NO_DUPS</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd .zsh/plugins</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zdharma-continuum/fast-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-autosuggestions.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-completions.git</span><br></pre></td></tr></table></figure></div>
 
 <blockquote>
-<p>前提：安装了pipewire才建议使用此方案<br>ArchLinux安装pipewire的指令如下（可能不全）</p>
+<p>若此处报错请自行配置公钥，或更换HTTP方式clone</p>
 </blockquote>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S pipewire pipewire-pulse</span><br></pre></td></tr></table></figure></div>
+<h2 id="继续添加配置到-zshrc"><a href="#继续添加配置到-zshrc" class="headerlink" title="继续添加配置到 .zshrc"></a>继续添加配置到 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh</span><br><span class="line">fpath=($ZSH/plugins/zsh-completions/src $fpath)</span><br><span class="line"></span><br><span class="line"># zsh-autosuggestions:config</span><br><span class="line">source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#647696,underline&quot;</span><br><span class="line">ZSH_AUTOSUGGEST_STRATEGY=(history completion)</span><br><span class="line">ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20</span><br><span class="line"></span><br><span class="line">export PROMPT=&#x27;[%n]$ &#x27;</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="2-OBS-28-0或更高版本"><a href="#2-OBS-28-0或更高版本" class="headerlink" title="2. OBS 28.0或更高版本"></a><strong>2. OBS 28.0或更高版本</strong></h3><p>你可以直接使用pacman安装OBS</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S obs-studio</span><br></pre></td></tr></table></figure></div>
+<h2 id="创建符号链接"><a href="#创建符号链接" class="headerlink" title="创建符号链接"></a>创建符号链接</h2><p>先删除家目录下的 <strong>.zshrc</strong> 文件</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~/.zshrc</span><br></pre></td></tr></table></figure></div>
 
-<p>当然，如果是打算使用哔哩哔哩进行直播，又希望显示弹幕的话，多半会去安装弹幕工具，而弹幕工具一般需要添加浏览器来源。</p>
-<p><strong>推荐</strong>：安装使用浏览器插件进行编译的官方包。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>不推荐</strong>：打包的支持<a class="link"   target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/obs-studio-browser" >浏览器插件集成的OBS<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>安装这个版本的话，编译可能要很久(大约10分钟)<br>这个版本将<strong>ffmpeg</strong>替换为了<strong>ffmpeg-obs</strong>，这可能导致很多问题，维护需要大量精力。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S obs-studio-browser </span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="安装、使用插件"><a href="#安装、使用插件" class="headerlink" title="安装、使用插件"></a>安装、使用插件</h3><p>从<a target="_blank" rel="noopener" href="https://github.com/dimtpap/obs-pipewire-audio-capture"><strong>obs-pipewire-audio-capture</strong></a>仓库的发行版下载<strong>linux-pipewire-audio-[版本号].tar.gz</strong>文件<br>解压到OBS的插件目录，一般为 <strong>~&#x2F;.config&#x2F;obs-studio&#x2F;plugins&#x2F;</strong><br>解压后重启OBS或重启电脑，即可在OBS添加来源处看到可以添加的三个来源</p>
-<p>这三个来源我们只需要使用第一个 <strong>应用音频捕获(PipeWire)</strong> 即可。</p>
-<p>添加来源后，第一个选项 <strong>Match Priority</strong> 不需要修改，修改下方 <strong>Application</strong> 处，将需要捕获的应用加入。</p>
-<blockquote>
-<p>如果发现找不到需要的那个应用，再尝试修改 <strong>Match Priority</strong> 的选项，这会改变获取应用的方式。</p>
-</blockquote>
-<p>下面的可勾选项的效果为，录制除选中应用音频之外的全部音频（反选音频）。</p>
-<p>至此，插件的安装和使用就介绍完毕了。</p>
-<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>最常见的问题就是程序并没有成功的录制应用音频了，此时请检查环境需求中的WirePlumber是否被成功安装？以及你的音频驱动是否是PipeWire。<br>如果发现没有存在这些问题，检查安装后是否重启过电脑？若没有则重启再尝试。</p>
-<p>如果还是不行，请参考方案二。</p>
-<h2 id="方案二-音频跳线"><a href="#方案二-音频跳线" class="headerlink" title="方案二 音频跳线"></a>方案二 音频跳线</h2><p>这是一个比较麻烦的方法，这里不会详细介绍。<br>但我会对简单的使用方法进行说明。</p>
-<p>首先，在OBS来源中添加 <strong>JACK 输入客户端</strong> 并勾选 <strong>启动 JACK 服务器</strong>。<br>然后，安装类似 <strong>Helvum</strong> 的音频跳线软件，或通过其他方式进行音频跳线。</p>
-<p>Helvum界面预览，<del class="mask">一团糟</del> 当然，这是因为我有独立声卡，外加配置了后期音频处理的结果。<br><figure class="image-caption"><img  
+<p>创建符号链接</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s ~/.zsh/.zshrc ~/.zshrc</span><br></pre></td></tr></table></figure></div>
+<hr>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://img.514.live/img/helvum.png"
-                      alt="Helvum"
-                ><figcaption>Helvum</figcaption></figure></p>
-<p>将需要捕获的应用与 <strong>JACK输入</strong> 相连，此时OBS中 <strong>JACK 输入客户端</strong> 将捕获到被连接的应用音频。</p>
-<p>缺点：每次需要手动配置，但可以通过开机执行一些指令，或添加一些配置文件来固化这个操作。<br>优点：没有其他解决方案时的万能解，紧急情况没有安装插件的救济措施，以及也许<strong>可能更低</strong>的音频延迟</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我个人还是推荐方案一，简单好用，也能够满足大部分情况了。<br>至于方案二，留作一个备用的应急解决方案好了，当然如果你有强烈的强迫症或者奇怪的精神洁癖，你可以考虑深入研究一下…</p>
+                     data-src="/../images/zshpreview.png"
+                     
+                ></p>
+<hr>
+<h2 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h2><p><strong>三个 Plugins 对应的 repository</strong></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/zdharma-continuum/fast-syntax-highlighting" >https://github.com/zdharma-continuum/fast-syntax-highlighting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions" >https://github.com/zsh-users/zsh-autosuggestions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-completions" >https://github.com/zsh-users/zsh-completions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 
 		</div>
 
@@ -899,18 +886,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> ArchLinux下OBS捕获单应用音频的解决方案</li>
+        <li><strong>标题:</strong> 如何配置一个简单实用且干净的zsh</li>
         <li><strong>作者:</strong> 巧克力绒</li>
         <li><strong>创建于
-                :</strong> 2023-10-03 08:22:00</li>
+                :</strong> 2025-07-09 01:47:00</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-10-03 08:22:00
+                    :</strong> 2025-07-09 01:47:00
             </li>
         
         <li>
-            <strong>链接:</strong> https://514.live/2023/10/03/linuxobscapture/
+            <strong>链接:</strong> https://514.live/2025/07/09/zsgconfig/
         </li>
         <li>
             <strong>
@@ -943,23 +930,11 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2023/10/04/efbwechattg/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">微信与TG互通 基于EFB的ComWechat搭建教程</span>
-						<span class="post-nav-item">上一篇</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2023/05/23/hello,world!/">
+				<a class="next" rel="next" href="/2023/10/12/linuxobsbrowser/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item truncate max-w-48">你好，世界！</span>
+						<span class="post-nav-title-item truncate max-w-48">ArchLinux下安装带浏览器源的OBS</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -1034,8 +1009,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">ArchLinux下OBS捕获单应用音频的解决方案</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%B7%E5%9B%A0"><span class="nav-text">起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-text">环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B9%E6%A1%88"><span class="nav-text">方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80-OBS%E6%8F%92%E4%BB%B6"><span class="nav-text">方案一 OBS插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82"><span class="nav-text">环境需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-WirePlumber"><span class="nav-text">1. WirePlumber</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-OBS-28-0%E6%88%96%E6%9B%B4%E9%AB%98%E7%89%88%E6%9C%AC"><span class="nav-text">2. OBS 28.0或更高版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E3%80%81%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="nav-text">安装、使用插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C-%E9%9F%B3%E9%A2%91%E8%B7%B3%E7%BA%BF"><span class="nav-text">方案二 音频跳线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
+		<div class="page-title">如何配置一个简单实用且干净的zsh</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">创建配置文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91-zshrc"><span class="nav-text">编辑 .zshrc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E7%BB%AD%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E5%88%B0-zshrc"><span class="nav-text">继续添加配置到 .zshrc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5"><span class="nav-text">创建符号链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C"><span class="nav-text">最终效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%9D%E5%A4%96"><span class="nav-text">额外</span></a></li></ol>
 
 	</div>
 </div>
