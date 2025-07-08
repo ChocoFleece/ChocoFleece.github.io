@@ -158,6 +158,33 @@
       </tags>
   </entry>
   <entry>
+    <title>ArchLinux下安装带浏览器源的OBS</title>
+    <url>/2023/10/12/linuxobsbrowser/</url>
+    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
+<p>在ArchLinux下通过pacman安装的obs-studio软件包默认是不在<strong>来源</strong>页包含<strong>浏览器</strong>源的选项支持的。而我们需要用到的时候就需要为OBS添加浏览器源的支持。<br>虽然默认的obs-studio包不提供这个插件，但可以通过其他客户端或插件包添加。</p>
+</blockquote>
+<h3 id="推荐方案1"><a href="#推荐方案1" class="headerlink" title="推荐方案1"></a><strong>推荐方案1</strong></h3><p>安装使用<a class="link"   href="https://github.com/obsproject/obs-browser" >浏览器插件<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>进行编译的官方包。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="推荐方案2"><a href="#推荐方案2" class="headerlink" title="推荐方案2"></a><strong>推荐方案2</strong></h3><p>这是一款定制的客户端，提供浏览器插件以及浏览器停靠栏，还有其他改进。不过如果能够满足自己的需求的话，依然是官方包最佳。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-tytan652</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="不推荐方案"><a href="#不推荐方案" class="headerlink" title="不推荐方案"></a><strong>不推荐方案</strong></h3><p>打包的支持浏览器插件集成的OBS</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#任选</span><br><span class="line">yay -S obs-studio-browser</span><br><span class="line">yay -S obs-linuxbrowser</span><br></pre></td></tr></table></figure></div>
+
+<p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
+<p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
+<p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>研究</category>
+      </categories>
+      <tags>
+        <tag>研究</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ArchLinux下OBS捕获单应用音频的解决方案</title>
     <url>/2023/10/03/linuxobscapture/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
@@ -221,33 +248,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ArchLinux下安装带浏览器源的OBS</title>
-    <url>/2023/10/12/linuxobsbrowser/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
-<p>在ArchLinux下通过pacman安装的obs-studio软件包默认是不在<strong>来源</strong>页包含<strong>浏览器</strong>源的选项支持的。而我们需要用到的时候就需要为OBS添加浏览器源的支持。<br>虽然默认的obs-studio包不提供这个插件，但可以通过其他客户端或插件包添加。</p>
-</blockquote>
-<h3 id="推荐方案1"><a href="#推荐方案1" class="headerlink" title="推荐方案1"></a><strong>推荐方案1</strong></h3><p>安装使用<a class="link"   href="https://github.com/obsproject/obs-browser" >浏览器插件<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>进行编译的官方包。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="推荐方案2"><a href="#推荐方案2" class="headerlink" title="推荐方案2"></a><strong>推荐方案2</strong></h3><p>这是一款定制的客户端，提供浏览器插件以及浏览器停靠栏，还有其他改进。不过如果能够满足自己的需求的话，依然是官方包最佳。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-tytan652</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="不推荐方案"><a href="#不推荐方案" class="headerlink" title="不推荐方案"></a><strong>不推荐方案</strong></h3><p>打包的支持浏览器插件集成的OBS</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#任选</span><br><span class="line">yay -S obs-studio-browser</span><br><span class="line">yay -S obs-linuxbrowser</span><br></pre></td></tr></table></figure></div>
-
-<p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
-<p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
-<p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>研究</category>
-      </categories>
-      <tags>
-        <tag>研究</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何配置一个简单实用且干净的zsh</title>
     <url>/2025/07/09/zsgconfig/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文可以让我仅配置三个简单的功能插件</p>
@@ -259,7 +259,7 @@
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">uninstall_oh_my_zsh</span><br></pre></td></tr></table></figure></div>
 
 <hr>
-<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
+<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
 
 <h2 id="编辑-zshrc"><a href="#编辑-zshrc" class="headerlink" title="编辑 .zshrc"></a>编辑 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">### ZSH HOME</span><br><span class="line">export ZSH=$HOME/.zsh</span><br><span class="line"></span><br><span class="line">### ---- history config ----------</span><br><span class="line">export HISTFILE=$ZSH/.zsh_history</span><br><span class="line"></span><br><span class="line"># How many commands zsh will load to memory.</span><br><span class="line">export HISTSIZE=10000</span><br><span class="line"></span><br><span class="line"># How maney commands history will save on file.</span><br><span class="line">export SAVEHIST=10000</span><br><span class="line"></span><br><span class="line"># History won&#x27;t save duplicates.</span><br><span class="line">setopt HIST_IGNORE_ALL_DUPS</span><br><span class="line"></span><br><span class="line"># History won&#x27;t show duplicates on search.</span><br><span class="line">setopt HIST_FIND_NO_DUPS</span><br></pre></td></tr></table></figure></div>
