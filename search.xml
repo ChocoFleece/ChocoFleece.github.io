@@ -267,7 +267,7 @@
 <h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd .zsh/plugins</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zdharma-continuum/fast-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-autosuggestions.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-completions.git</span><br></pre></td></tr></table></figure></div>
 
 <blockquote>
-<p>若此处报错请自行配置公钥，或更换HTTP方式clone</p>
+<p>若此处报错请自行配置公钥，或更换HTTPS方式clone</p>
 </blockquote>
 <h2 id="继续添加配置到-zshrc"><a href="#继续添加配置到-zshrc" class="headerlink" title="继续添加配置到 .zshrc"></a>继续添加配置到 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh</span><br><span class="line">fpath=($ZSH/plugins/zsh-completions/src $fpath)</span><br><span class="line"></span><br><span class="line"># zsh-autosuggestions:config</span><br><span class="line">source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#647696,underline&quot;</span><br><span class="line">ZSH_AUTOSUGGEST_STRATEGY=(history completion)</span><br><span class="line">ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20</span><br><span class="line"></span><br><span class="line">export PROMPT=&#x27;[%n]$ &#x27;</span><br></pre></td></tr></table></figure></div>
