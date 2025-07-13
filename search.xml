@@ -249,8 +249,8 @@
   </entry>
   <entry>
     <title>如何配置一个简单实用且干净的zsh</title>
-    <url>/2025/07/09/zsgconfig/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文可以让我仅配置三个简单的功能插件</p>
+    <url>/2025/07/09/zshconfig/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文仅配置附带三个简单的实用功能插件的 zsh 。</p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先安装 <strong>zsh</strong> 并切换默认 Shell 至 <strong>&#x2F;bin&#x2F;zsh</strong></p>
 <blockquote>
 <p>可通过<code> chsh -l</code>查看所有可用的 Shell</p>
