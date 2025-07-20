@@ -1,200 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2023/05/23/hello,world!/</url>
-    <content><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p>
-<p>Front-matter示例：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你好，世界！</span><br><span class="line"><span class="built_in">date</span>: 2023-05-23 20:57:13</span><br><span class="line">updated: 2023-05-23 20:57:13</span><br><span class="line">tags: </span><br><span class="line">    - 建站</span><br><span class="line">categories: </span><br><span class="line">    - 建站</span><br><span class="line">description: 建站时，测试用的文章</span><br><span class="line">thumbnail: /images/default_cover.webp  <span class="comment">#首页缩略图、文章头图</span></span><br><span class="line">expires: 2023-08-31 23:59:59  <span class="comment">#超过本时间提示文章可能过时</span></span><br><span class="line"><span class="comment"># excerpt: &quot;这里是显示的摘要，可不填，自动生成&quot;</span></span><br><span class="line"><span class="comment"># sticky: 1 #数字越大文章越靠前</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ArchLinux下安装带浏览器源的OBS</title>
-    <url>/2023/10/12/linuxobsbrowser/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
-<p>在ArchLinux下通过pacman安装的obs-studio软件包默认是不在<strong>来源</strong>页包含<strong>浏览器</strong>源的选项支持的。而我们需要用到的时候就需要为OBS添加浏览器源的支持。<br>虽然默认的obs-studio包不提供这个插件，但可以通过其他客户端或插件包添加。</p>
-</blockquote>
-<h3 id="推荐方案1"><a href="#推荐方案1" class="headerlink" title="推荐方案1"></a><strong>推荐方案1</strong></h3><p>安装使用<a class="link"   href="https://github.com/obsproject/obs-browser" >浏览器插件<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>进行编译的官方包。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="推荐方案2"><a href="#推荐方案2" class="headerlink" title="推荐方案2"></a><strong>推荐方案2</strong></h3><p>这是一款定制的客户端，提供浏览器插件以及浏览器停靠栏，还有其他改进。不过如果能够满足自己的需求的话，依然是官方包最佳。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-tytan652</span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="不推荐方案"><a href="#不推荐方案" class="headerlink" title="不推荐方案"></a><strong>不推荐方案</strong></h3><p>打包的支持浏览器插件集成的OBS</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#任选</span><br><span class="line">yay -S obs-studio-browser</span><br><span class="line">yay -S obs-linuxbrowser</span><br></pre></td></tr></table></figure></div>
-
-<p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
-<p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
-<p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ArchLinux下OBS捕获单应用音频的解决方案</title>
-    <url>/2023/10/03/linuxobscapture/</url>
-    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
-<p>起因十分简单，我在几个月前转用ArchLinux作为主力系统使用，逐渐适应并喜爱上了Linux生态。然而Linux常常处于不被消费级软件重视的地位，这使得很多时候我们需要自己解决问题。比如我试图在Linux下直播我的游戏，但是同时我又要和朋友语音通话，为了不录入我自己和朋友的声音到直播中 <del class="mask">社恐.gif</del> 我开始按照Windows的思路试图捕获单个应用音频，此时我发现这项功能仅仅在Windows版本的OBS中进行测试，而Linux下是没有这个功能的，经过一番探索和交流，获得了两个比较泛用的方案。</p>
-</blockquote>
-<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>下面来介绍一下我的ArchLinux环境<br>N卡、最新系统、AMD的CPU等等，这些不需要提，也不相关的内容。桌面环境KDE，渲染用的X11，这些有一点关系，但不大。<br><strong>音频系统Pipewire</strong>，这个很重要，因为<strong>本文仅针对Pipewire生效</strong>。</p>
-<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><p>一共有两种方案，下面我来分别介绍一下。</p>
-<blockquote>
-<p>我个人是比较推荐<strong>方案一</strong>的，两种方案各有优缺点，下面将详细说明。</p>
-</blockquote>
-<h2 id="方案一-OBS插件"><a href="#方案一-OBS插件" class="headerlink" title="方案一 OBS插件"></a>方案一 OBS插件</h2><blockquote>
-<p>使用Github开源的OBS插件<a href="https://github.com/dimtpap/obs-pipewire-audio-capture"><strong>obs-pipewire-audio-capture</strong></a></p>
-</blockquote>
-<p>这种方案的优点是配置简单，缺点则是可能随着某次音频驱动的更新，该方案失效，当然可能性微乎其微，同时插件肯定也会跟进更新，因此基本没有什么缺点。</p>
-<h3 id="环境需求"><a href="#环境需求" class="headerlink" title="环境需求"></a>环境需求</h3><h3 id="1-WirePlumber"><a href="#1-WirePlumber" class="headerlink" title="1. WirePlumber"></a><strong>1. WirePlumber</strong></h3><p>ArchLinux下安装WirePlumber的命令</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S wireplumber</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>前提：安装了pipewire才建议使用此方案<br>ArchLinux安装pipewire的指令如下（可能不全）</p>
-</blockquote>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pacman -S pipewire pipewire-pulse</span><br></pre></td></tr></table></figure></div>
-
-<h3 id="2-OBS-28-0或更高版本"><a href="#2-OBS-28-0或更高版本" class="headerlink" title="2. OBS 28.0或更高版本"></a><strong>2. OBS 28.0或更高版本</strong></h3><p>你可以直接使用pacman安装OBS</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S obs-studio</span><br></pre></td></tr></table></figure></div>
-
-<p>当然，如果是打算使用哔哩哔哩进行直播，又希望显示弹幕的话，多半会去安装弹幕工具，而弹幕工具一般需要添加浏览器来源。</p>
-<p><strong>推荐</strong>：安装使用浏览器插件进行编译的官方包。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
-
-<p><strong>不推荐</strong>：打包的支持<a class="link"   href="https://aur.archlinux.org/packages/obs-studio-browser" >浏览器插件集成的OBS<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>安装这个版本的话，编译可能要很久(大约10分钟)<br>这个版本将<strong>ffmpeg</strong>替换为了<strong>ffmpeg-obs</strong>，这可能导致很多问题，维护需要大量精力。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-browser </span><br></pre></td></tr></table></figure></div>
-
-
-<h3 id="安装、使用插件"><a href="#安装、使用插件" class="headerlink" title="安装、使用插件"></a>安装、使用插件</h3><p>从<a href="https://github.com/dimtpap/obs-pipewire-audio-capture"><strong>obs-pipewire-audio-capture</strong></a>仓库的发行版下载<strong>linux-pipewire-audio-[版本号].tar.gz</strong>文件<br>解压到OBS的插件目录，一般为 <strong>~&#x2F;.config&#x2F;obs-studio&#x2F;plugins&#x2F;</strong><br>解压后重启OBS或重启电脑，即可在OBS添加来源处看到可以添加的三个来源</p>
-<p>这三个来源我们只需要使用第一个 <strong>应用音频捕获(PipeWire)</strong> 即可。</p>
-<p>添加来源后，第一个选项 <strong>Match Priority</strong> 不需要修改，修改下方 <strong>Application</strong> 处，将需要捕获的应用加入。</p>
-<blockquote>
-<p>如果发现找不到需要的那个应用，再尝试修改 <strong>Match Priority</strong> 的选项，这会改变获取应用的方式。</p>
-</blockquote>
-<p>下面的可勾选项的效果为，录制除选中应用音频之外的全部音频（反选音频）。</p>
-<p>至此，插件的安装和使用就介绍完毕了。</p>
-<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>最常见的问题就是程序并没有成功的录制应用音频了，此时请检查环境需求中的WirePlumber是否被成功安装？以及你的音频驱动是否是PipeWire。<br>如果发现没有存在这些问题，检查安装后是否重启过电脑？若没有则重启再尝试。</p>
-<p>如果还是不行，请参考方案二。</p>
-<h2 id="方案二-音频跳线"><a href="#方案二-音频跳线" class="headerlink" title="方案二 音频跳线"></a>方案二 音频跳线</h2><p>这是一个比较麻烦的方法，这里不会详细介绍。<br>但我会对简单的使用方法进行说明。</p>
-<p>首先，在OBS来源中添加 <strong>JACK 输入客户端</strong> 并勾选 <strong>启动 JACK 服务器</strong>。<br>然后，安装类似 <strong>Helvum</strong> 的音频跳线软件，或通过其他方式进行音频跳线。</p>
-<p>Helvum界面预览，<del class="mask">一团糟</del> 当然，这是因为我有独立声卡，外加配置了后期音频处理的结果。<br><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://img.514.live/img/helvum.png"
-                      alt="Helvum"
-                ><figcaption>Helvum</figcaption></figure></p>
-<p>将需要捕获的应用与 <strong>JACK输入</strong> 相连，此时OBS中 <strong>JACK 输入客户端</strong> 将捕获到被连接的应用音频。</p>
-<p>缺点：每次需要手动配置，但可以通过开机执行一些指令，或添加一些配置文件来固化这个操作。<br>优点：没有其他解决方案时的万能解，紧急情况没有安装插件的救济措施，以及也许<strong>可能更低</strong>的音频延迟</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我个人还是推荐方案一，简单好用，也能够满足大部分情况了。<br>至于方案二，留作一个备用的应急解决方案好了，当然如果你有强烈的强迫症或者奇怪的精神洁癖，你可以考虑深入研究一下…</p>
-]]></content>
-      <categories>
-        <category>研究</category>
-      </categories>
-      <tags>
-        <tag>研究</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Wayland下制作一个完美的Discord</title>
-    <url>/2025/07/21/waylanddc/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间更换到了ArchLinux+Hyprland的环境，渲染使用Wayland而非X11,这带来了很多新体验，也带来了许多渲染问题。<br>此文中，我将逐步说明如何配置一个完美的Discord，运行在Wayland中。</p>
-<blockquote>
-<p>注意：Flatpak安装的Discord无法进行硬件渲染，因此请不要使用。</p>
-</blockquote>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先通过 <a class="link"   href="https://discord.com/api/download/canary?platform=linux&format=tar.gz" >此地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 直接下载Discord官方提供的Canary tarball。<br>这是必要的前提条件。</p>
-<p>下载后解压，例如我解压到了 <code>~/Documents/DiscordCanary/</code></p>
-<h2 id="创建-desktop文件"><a href="#创建-desktop文件" class="headerlink" title="创建.desktop文件"></a>创建.desktop文件</h2><p>在 <code>~/.local/share/applications/discord-canary.desktop</code> 中创建一个文件，记得替换路径为你的解压路径：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Discord Canary (Wayland)</span><br><span class="line">Comment=Discord Canary with Wayland + Vulkan + NVENC</span><br><span class="line">Exec=/home/zhongzi26/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br><span class="line">Icon=discord</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><p><code>chmod +x ~/Documents/DiscordCanary/DiscordCanary</code></p>
-<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>确保例如 ~&#x2F;.profile 或 ~&#x2F;.zshrc 等默认加载的配置中有以下环境变量：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LIBVA_DRIVER_NAME=nvidia</span><br><span class="line">export __GLX_VENDOR_LIBRARY_NAME=nvidia</span><br><span class="line">export GBM_BACKEND=nvidia-drm</span><br><span class="line">export MOZ_ENABLE_WAYLAND=1</span><br><span class="line">export XDG_SESSION_TYPE=wayland</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>我则是放在了 ~&#x2F;.profile 中</p>
-</blockquote>
-<hr>
-<h2 id="测试启动"><a href="#测试启动" class="headerlink" title="测试启动"></a>测试启动</h2><p>在终端中执行.desktop文件中Exec行的内容，观察应用是否正常工作。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br></pre></td></tr></table></figure></div>
-
-<p>若正常工作，重启并使用应用启动器再次尝试。（若出现如透明等渲染问题，尝试排除启动参数）</p>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先关闭Discord应用，包括后台进程。</p>
-<p>使用AUR包管理器安装vencord-installer包，并启动</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S vencord-installer</span><br><span class="line"></span><br><span class="line">vencordinstaller</span><br></pre></td></tr></table></figure></div>
-
-<p>在弹出的窗口中选择 Custom Install Location 将前面的解压目录写入其中，记得更换为你自己的。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary</span><br></pre></td></tr></table></figure></div>
-
-<p>若无报错，则可以启动Discord，点击设置查看是否有Vencord插件。</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何配置一个简单实用且干净的zsh</title>
-    <url>/2025/07/09/zshconfig/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文仅配置附带三个简单的实用功能插件的 zsh 。</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先安装 <strong>zsh</strong> 并切换默认 Shell 至 <strong>&#x2F;bin&#x2F;zsh</strong></p>
-<blockquote>
-<p>可通过<code> chsh -l</code>查看所有可用的 Shell</p>
-</blockquote>
-<p>若安装了 <strong>oh-my-zsh</strong> 请先卸载</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">uninstall_oh_my_zsh</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="编辑-zshrc"><a href="#编辑-zshrc" class="headerlink" title="编辑 .zshrc"></a>编辑 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">### ZSH HOME</span><br><span class="line">export ZSH=$HOME/.zsh</span><br><span class="line"></span><br><span class="line">### ---- history config ----------</span><br><span class="line">export HISTFILE=$ZSH/.zsh_history</span><br><span class="line"></span><br><span class="line"># How many commands zsh will load to memory.</span><br><span class="line">export HISTSIZE=10000</span><br><span class="line"></span><br><span class="line"># How maney commands history will save on file.</span><br><span class="line">export SAVEHIST=10000</span><br><span class="line"></span><br><span class="line"># History won&#x27;t save duplicates.</span><br><span class="line">setopt HIST_IGNORE_ALL_DUPS</span><br><span class="line"></span><br><span class="line"># History won&#x27;t show duplicates on search.</span><br><span class="line">setopt HIST_FIND_NO_DUPS</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd .zsh/plugins</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zdharma-continuum/fast-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-autosuggestions.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-completions.git</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>若此处报错请自行配置公钥，或更换HTTPS方式clone</p>
-</blockquote>
-<h2 id="继续添加配置到-zshrc"><a href="#继续添加配置到-zshrc" class="headerlink" title="继续添加配置到 .zshrc"></a>继续添加配置到 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh</span><br><span class="line">fpath=($ZSH/plugins/zsh-completions/src $fpath)</span><br><span class="line"></span><br><span class="line"># zsh-autosuggestions:config</span><br><span class="line">source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#647696,underline&quot;</span><br><span class="line">ZSH_AUTOSUGGEST_STRATEGY=(history completion)</span><br><span class="line">ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20</span><br><span class="line"></span><br><span class="line">export PROMPT=&#x27;[%n]$ &#x27;</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="创建符号链接"><a href="#创建符号链接" class="headerlink" title="创建符号链接"></a>创建符号链接</h2><p>先删除家目录下的 <strong>.zshrc</strong> 文件</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm ~/.zshrc</span><br></pre></td></tr></table></figure></div>
-
-<p>创建符号链接</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s ~/.zsh/.zshrc ~/.zshrc</span><br></pre></td></tr></table></figure></div>
-<hr>
-<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/zshpreview.png"
-                     
-                ></p>
-<hr>
-<h2 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h2><p><strong>三个 Plugins 对应的 repository</strong></p>
-<p><a class="link"   href="https://github.com/zdharma-continuum/fast-syntax-highlighting" >https://github.com/zdharma-continuum/fast-syntax-highlighting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><a class="link"   href="https://github.com/zsh-users/zsh-autosuggestions" >https://github.com/zsh-users/zsh-autosuggestions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><a class="link"   href="https://github.com/zsh-users/zsh-completions" >https://github.com/zsh-users/zsh-completions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微信与TG互通 基于EFB的ComWechat搭建教程</title>
     <url>/2023/10/04/efbwechattg/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
@@ -329,6 +135,200 @@
 <p>其他使用相关不再赘述，自行查阅其他教程或说明文档等</p>
 </blockquote>
 <h1 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h1><p>至此，教程完毕，若有问题请再三阅读教程后提问</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好，世界！</title>
+    <url>/2023/05/23/hello,world!/</url>
+    <content><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p>
+<p>Front-matter示例：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你好，世界！</span><br><span class="line"><span class="built_in">date</span>: 2023-05-23 20:57:13</span><br><span class="line">updated: 2023-05-23 20:57:13</span><br><span class="line">tags: </span><br><span class="line">    - 建站</span><br><span class="line">categories: </span><br><span class="line">    - 建站</span><br><span class="line">description: 建站时，测试用的文章</span><br><span class="line">thumbnail: /images/default_cover.webp  <span class="comment">#首页缩略图、文章头图</span></span><br><span class="line">expires: 2023-08-31 23:59:59  <span class="comment">#超过本时间提示文章可能过时</span></span><br><span class="line"><span class="comment"># excerpt: &quot;这里是显示的摘要，可不填，自动生成&quot;</span></span><br><span class="line"><span class="comment"># sticky: 1 #数字越大文章越靠前</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ArchLinux下安装带浏览器源的OBS</title>
+    <url>/2023/10/12/linuxobsbrowser/</url>
+    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
+<p>在ArchLinux下通过pacman安装的obs-studio软件包默认是不在<strong>来源</strong>页包含<strong>浏览器</strong>源的选项支持的。而我们需要用到的时候就需要为OBS添加浏览器源的支持。<br>虽然默认的obs-studio包不提供这个插件，但可以通过其他客户端或插件包添加。</p>
+</blockquote>
+<h3 id="推荐方案1"><a href="#推荐方案1" class="headerlink" title="推荐方案1"></a><strong>推荐方案1</strong></h3><p>安装使用<a class="link"   href="https://github.com/obsproject/obs-browser" >浏览器插件<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>进行编译的官方包。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="推荐方案2"><a href="#推荐方案2" class="headerlink" title="推荐方案2"></a><strong>推荐方案2</strong></h3><p>这是一款定制的客户端，提供浏览器插件以及浏览器停靠栏，还有其他改进。不过如果能够满足自己的需求的话，依然是官方包最佳。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-tytan652</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="不推荐方案"><a href="#不推荐方案" class="headerlink" title="不推荐方案"></a><strong>不推荐方案</strong></h3><p>打包的支持浏览器插件集成的OBS</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#任选</span><br><span class="line">yay -S obs-studio-browser</span><br><span class="line">yay -S obs-linuxbrowser</span><br></pre></td></tr></table></figure></div>
+
+<p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
+<p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
+<p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ArchLinux下OBS捕获单应用音频的解决方案</title>
+    <url>/2023/10/03/linuxobscapture/</url>
+    <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
+<p>起因十分简单，我在几个月前转用ArchLinux作为主力系统使用，逐渐适应并喜爱上了Linux生态。然而Linux常常处于不被消费级软件重视的地位，这使得很多时候我们需要自己解决问题。比如我试图在Linux下直播我的游戏，但是同时我又要和朋友语音通话，为了不录入我自己和朋友的声音到直播中 <del class="mask">社恐.gif</del> 我开始按照Windows的思路试图捕获单个应用音频，此时我发现这项功能仅仅在Windows版本的OBS中进行测试，而Linux下是没有这个功能的，经过一番探索和交流，获得了两个比较泛用的方案。</p>
+</blockquote>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>下面来介绍一下我的ArchLinux环境<br>N卡、最新系统、AMD的CPU等等，这些不需要提，也不相关的内容。桌面环境KDE，渲染用的X11，这些有一点关系，但不大。<br><strong>音频系统Pipewire</strong>，这个很重要，因为<strong>本文仅针对Pipewire生效</strong>。</p>
+<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><p>一共有两种方案，下面我来分别介绍一下。</p>
+<blockquote>
+<p>我个人是比较推荐<strong>方案一</strong>的，两种方案各有优缺点，下面将详细说明。</p>
+</blockquote>
+<h2 id="方案一-OBS插件"><a href="#方案一-OBS插件" class="headerlink" title="方案一 OBS插件"></a>方案一 OBS插件</h2><blockquote>
+<p>使用Github开源的OBS插件<a href="https://github.com/dimtpap/obs-pipewire-audio-capture"><strong>obs-pipewire-audio-capture</strong></a></p>
+</blockquote>
+<p>这种方案的优点是配置简单，缺点则是可能随着某次音频驱动的更新，该方案失效，当然可能性微乎其微，同时插件肯定也会跟进更新，因此基本没有什么缺点。</p>
+<h3 id="环境需求"><a href="#环境需求" class="headerlink" title="环境需求"></a>环境需求</h3><h3 id="1-WirePlumber"><a href="#1-WirePlumber" class="headerlink" title="1. WirePlumber"></a><strong>1. WirePlumber</strong></h3><p>ArchLinux下安装WirePlumber的命令</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S wireplumber</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>前提：安装了pipewire才建议使用此方案<br>ArchLinux安装pipewire的指令如下（可能不全）</p>
+</blockquote>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pacman -S pipewire pipewire-pulse</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-OBS-28-0或更高版本"><a href="#2-OBS-28-0或更高版本" class="headerlink" title="2. OBS 28.0或更高版本"></a><strong>2. OBS 28.0或更高版本</strong></h3><p>你可以直接使用pacman安装OBS</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo pacman -S obs-studio</span><br></pre></td></tr></table></figure></div>
+
+<p>当然，如果是打算使用哔哩哔哩进行直播，又希望显示弹幕的话，多半会去安装弹幕工具，而弹幕工具一般需要添加浏览器来源。</p>
+<p><strong>推荐</strong>：安装使用浏览器插件进行编译的官方包。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-git</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>不推荐</strong>：打包的支持<a class="link"   href="https://aur.archlinux.org/packages/obs-studio-browser" >浏览器插件集成的OBS<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>安装这个版本的话，编译可能要很久(大约10分钟)<br>这个版本将<strong>ffmpeg</strong>替换为了<strong>ffmpeg-obs</strong>，这可能导致很多问题，维护需要大量精力。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S obs-studio-browser </span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="安装、使用插件"><a href="#安装、使用插件" class="headerlink" title="安装、使用插件"></a>安装、使用插件</h3><p>从<a href="https://github.com/dimtpap/obs-pipewire-audio-capture"><strong>obs-pipewire-audio-capture</strong></a>仓库的发行版下载<strong>linux-pipewire-audio-[版本号].tar.gz</strong>文件<br>解压到OBS的插件目录，一般为 <strong>~&#x2F;.config&#x2F;obs-studio&#x2F;plugins&#x2F;</strong><br>解压后重启OBS或重启电脑，即可在OBS添加来源处看到可以添加的三个来源</p>
+<p>这三个来源我们只需要使用第一个 <strong>应用音频捕获(PipeWire)</strong> 即可。</p>
+<p>添加来源后，第一个选项 <strong>Match Priority</strong> 不需要修改，修改下方 <strong>Application</strong> 处，将需要捕获的应用加入。</p>
+<blockquote>
+<p>如果发现找不到需要的那个应用，再尝试修改 <strong>Match Priority</strong> 的选项，这会改变获取应用的方式。</p>
+</blockquote>
+<p>下面的可勾选项的效果为，录制除选中应用音频之外的全部音频（反选音频）。</p>
+<p>至此，插件的安装和使用就介绍完毕了。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>最常见的问题就是程序并没有成功的录制应用音频了，此时请检查环境需求中的WirePlumber是否被成功安装？以及你的音频驱动是否是PipeWire。<br>如果发现没有存在这些问题，检查安装后是否重启过电脑？若没有则重启再尝试。</p>
+<p>如果还是不行，请参考方案二。</p>
+<h2 id="方案二-音频跳线"><a href="#方案二-音频跳线" class="headerlink" title="方案二 音频跳线"></a>方案二 音频跳线</h2><p>这是一个比较麻烦的方法，这里不会详细介绍。<br>但我会对简单的使用方法进行说明。</p>
+<p>首先，在OBS来源中添加 <strong>JACK 输入客户端</strong> 并勾选 <strong>启动 JACK 服务器</strong>。<br>然后，安装类似 <strong>Helvum</strong> 的音频跳线软件，或通过其他方式进行音频跳线。</p>
+<p>Helvum界面预览，<del class="mask">一团糟</del> 当然，这是因为我有独立声卡，外加配置了后期音频处理的结果。<br><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://img.514.live/img/helvum.png"
+                      alt="Helvum"
+                ><figcaption>Helvum</figcaption></figure></p>
+<p>将需要捕获的应用与 <strong>JACK输入</strong> 相连，此时OBS中 <strong>JACK 输入客户端</strong> 将捕获到被连接的应用音频。</p>
+<p>缺点：每次需要手动配置，但可以通过开机执行一些指令，或添加一些配置文件来固化这个操作。<br>优点：没有其他解决方案时的万能解，紧急情况没有安装插件的救济措施，以及也许<strong>可能更低</strong>的音频延迟</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>我个人还是推荐方案一，简单好用，也能够满足大部分情况了。<br>至于方案二，留作一个备用的应急解决方案好了，当然如果你有强烈的强迫症或者奇怪的精神洁癖，你可以考虑深入研究一下…</p>
+]]></content>
+      <categories>
+        <category>研究</category>
+      </categories>
+      <tags>
+        <tag>研究</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Wayland下制作一个完美的Discord</title>
+    <url>/2025/07/21/waylanddc/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间更换到了ArchLinux+Hyprland的环境，渲染使用Wayland而非X11,这带来了很多新体验，也带来了许多渲染问题。<br>此文中，我将逐步说明如何配置一个完美的Discord，运行在Wayland中。</p>
+<blockquote>
+<p>注意：Flatpak安装的Discord无法进行硬件渲染，因此请不要使用。</p>
+</blockquote>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先通过 <a class="link"   href="https://discord.com/api/download/canary?platform=linux&format=tar.gz" >此地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 直接下载Discord官方提供的Canary tarball。<br>这是必要的前提条件。</p>
+<p>下载后解压，例如我解压到了 <code>~/Documents/DiscordCanary/</code></p>
+<h2 id="创建-desktop文件"><a href="#创建-desktop文件" class="headerlink" title="创建.desktop文件"></a>创建.desktop文件</h2><p>在 <code>~/.local/share/applications/discord-canary.desktop</code> 中创建一个文件，记得替换路径为你的解压路径：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Discord Canary (Wayland)</span><br><span class="line">Comment=Discord Canary with Wayland + Vulkan + NVENC + IME</span><br><span class="line">Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx DISCORD_ENABLE_WAYLAND=1 /home/zhongzi26/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --enable-wayland-ime --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br><span class="line">Icon=discord</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><p><code>chmod +x ~/Documents/DiscordCanary/DiscordCanary</code></p>
+<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>确保例如 ~&#x2F;.profile 或 ~&#x2F;.zshrc 等默认加载的配置中有以下环境变量：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LIBVA_DRIVER_NAME=nvidia</span><br><span class="line">export __GLX_VENDOR_LIBRARY_NAME=nvidia</span><br><span class="line">export GBM_BACKEND=nvidia-drm</span><br><span class="line">export MOZ_ENABLE_WAYLAND=1</span><br><span class="line">export XDG_SESSION_TYPE=wayland</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>我则是放在了 ~&#x2F;.profile 中</p>
+</blockquote>
+<hr>
+<h2 id="测试启动"><a href="#测试启动" class="headerlink" title="测试启动"></a>测试启动</h2><p>在终端中执行.desktop文件中Exec行的内容，观察应用是否正常工作。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br></pre></td></tr></table></figure></div>
+
+<p>若正常工作，重启并使用应用启动器再次尝试。（若出现如透明等渲染问题，尝试排除启动参数）</p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先关闭Discord应用，包括后台进程。</p>
+<p>使用AUR包管理器安装vencord-installer包，并启动</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S vencord-installer</span><br><span class="line"></span><br><span class="line">vencordinstaller</span><br></pre></td></tr></table></figure></div>
+
+<p>在弹出的窗口中选择 Custom Install Location 将前面的解压目录写入其中，记得更换为你自己的。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary</span><br></pre></td></tr></table></figure></div>
+
+<p>若无报错，则可以启动Discord，点击设置查看是否有Vencord插件。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何配置一个简单实用且干净的zsh</title>
+    <url>/2025/07/09/zshconfig/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文仅配置附带三个简单的实用功能插件的 zsh 。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先安装 <strong>zsh</strong> 并切换默认 Shell 至 <strong>&#x2F;bin&#x2F;zsh</strong></p>
+<blockquote>
+<p>可通过<code> chsh -l</code>查看所有可用的 Shell</p>
+</blockquote>
+<p>若安装了 <strong>oh-my-zsh</strong> 请先卸载</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">uninstall_oh_my_zsh</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="编辑-zshrc"><a href="#编辑-zshrc" class="headerlink" title="编辑 .zshrc"></a>编辑 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">### ZSH HOME</span><br><span class="line">export ZSH=$HOME/.zsh</span><br><span class="line"></span><br><span class="line">### ---- history config ----------</span><br><span class="line">export HISTFILE=$ZSH/.zsh_history</span><br><span class="line"></span><br><span class="line"># How many commands zsh will load to memory.</span><br><span class="line">export HISTSIZE=10000</span><br><span class="line"></span><br><span class="line"># How maney commands history will save on file.</span><br><span class="line">export SAVEHIST=10000</span><br><span class="line"></span><br><span class="line"># History won&#x27;t save duplicates.</span><br><span class="line">setopt HIST_IGNORE_ALL_DUPS</span><br><span class="line"></span><br><span class="line"># History won&#x27;t show duplicates on search.</span><br><span class="line">setopt HIST_FIND_NO_DUPS</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd .zsh/plugins</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zdharma-continuum/fast-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-autosuggestions.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-completions.git</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>若此处报错请自行配置公钥，或更换HTTPS方式clone</p>
+</blockquote>
+<h2 id="继续添加配置到-zshrc"><a href="#继续添加配置到-zshrc" class="headerlink" title="继续添加配置到 .zshrc"></a>继续添加配置到 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh</span><br><span class="line">fpath=($ZSH/plugins/zsh-completions/src $fpath)</span><br><span class="line"></span><br><span class="line"># zsh-autosuggestions:config</span><br><span class="line">source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#647696,underline&quot;</span><br><span class="line">ZSH_AUTOSUGGEST_STRATEGY=(history completion)</span><br><span class="line">ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20</span><br><span class="line"></span><br><span class="line">export PROMPT=&#x27;[%n]$ &#x27;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="创建符号链接"><a href="#创建符号链接" class="headerlink" title="创建符号链接"></a>创建符号链接</h2><p>先删除家目录下的 <strong>.zshrc</strong> 文件</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm ~/.zshrc</span><br></pre></td></tr></table></figure></div>
+
+<p>创建符号链接</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s ~/.zsh/.zshrc ~/.zshrc</span><br></pre></td></tr></table></figure></div>
+<hr>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/zshpreview.png"
+                     
+                ></p>
+<hr>
+<h2 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h2><p><strong>三个 Plugins 对应的 repository</strong></p>
+<p><a class="link"   href="https://github.com/zdharma-continuum/fast-syntax-highlighting" >https://github.com/zdharma-continuum/fast-syntax-highlighting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   href="https://github.com/zsh-users/zsh-autosuggestions" >https://github.com/zsh-users/zsh-autosuggestions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   href="https://github.com/zsh-users/zsh-completions" >https://github.com/zsh-users/zsh-completions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 ]]></content>
       <categories>
         <category>教程</category>
