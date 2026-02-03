@@ -185,6 +185,46 @@
       </tags>
   </entry>
   <entry>
+    <title>在Wayland下制作一个完美的Discord</title>
+    <url>/2025/07/21/waylanddc/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间更换到了ArchLinux+Hyprland的环境，渲染使用Wayland而非X11,这带来了很多新体验，也带来了许多渲染问题。<br>此文中，我将逐步说明如何配置一个完美的Discord，运行在Wayland中。</p>
+<blockquote>
+<p>注意：Flatpak安装的Discord无法进行硬件渲染，因此请不要使用。</p>
+</blockquote>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先通过 <a class="link"   href="https://discord.com/api/download/canary?platform=linux&format=tar.gz" >此地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 直接下载Discord官方提供的Canary tarball。<br>这是必要的前提条件。</p>
+<p>下载后解压，例如我解压到了 <code>~/Documents/DiscordCanary/</code></p>
+<h2 id="创建-desktop文件"><a href="#创建-desktop文件" class="headerlink" title="创建.desktop文件"></a>创建.desktop文件</h2><p>在 <code>~/.local/share/applications/discord-canary.desktop</code> 中创建一个文件，记得替换路径为你的解压路径：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Discord Canary (Wayland)</span><br><span class="line">Comment=Discord Canary with Wayland + Vulkan + NVENC + IME</span><br><span class="line">Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx DISCORD_ENABLE_WAYLAND=1 /home/zhongzi26/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --enable-wayland-ime --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br><span class="line">Icon=discord</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><p><code>chmod +x ~/Documents/DiscordCanary/DiscordCanary</code></p>
+<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>确保例如 ~&#x2F;.profile 或 ~&#x2F;.zshrc 等默认加载的配置中有以下环境变量：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LIBVA_DRIVER_NAME=nvidia</span><br><span class="line">export __GLX_VENDOR_LIBRARY_NAME=nvidia</span><br><span class="line">export GBM_BACKEND=nvidia-drm</span><br><span class="line">export MOZ_ENABLE_WAYLAND=1</span><br><span class="line">export XDG_SESSION_TYPE=wayland</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>我则是放在了 ~&#x2F;.profile 中</p>
+</blockquote>
+<hr>
+<h2 id="测试启动"><a href="#测试启动" class="headerlink" title="测试启动"></a>测试启动</h2><p>在终端中执行.desktop文件中Exec行的内容，观察应用是否正常工作。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br></pre></td></tr></table></figure></div>
+
+<p>若正常工作，重启并使用应用启动器再次尝试。（若出现如透明等渲染问题，尝试排除启动参数）</p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先关闭Discord应用，包括后台进程。</p>
+<p>使用AUR包管理器安装vencord-installer包，并启动</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S vencord-installer</span><br><span class="line"></span><br><span class="line">vencordinstaller</span><br></pre></td></tr></table></figure></div>
+
+<p>在弹出的窗口中选择 Custom Install Location 将前面的解压目录写入其中，记得更换为你自己的。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary</span><br></pre></td></tr></table></figure></div>
+
+<p>若无报错，则可以启动Discord，点击设置查看是否有Vencord插件。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ArchLinux下OBS捕获单应用音频的解决方案</title>
     <url>/2023/10/03/linuxobscapture/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
@@ -289,46 +329,6 @@
 <p><a class="link"   href="https://github.com/zdharma-continuum/fast-syntax-highlighting" >https://github.com/zdharma-continuum/fast-syntax-highlighting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <p><a class="link"   href="https://github.com/zsh-users/zsh-autosuggestions" >https://github.com/zsh-users/zsh-autosuggestions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <p><a class="link"   href="https://github.com/zsh-users/zsh-completions" >https://github.com/zsh-users/zsh-completions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Wayland下制作一个完美的Discord</title>
-    <url>/2025/07/21/waylanddc/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间更换到了ArchLinux+Hyprland的环境，渲染使用Wayland而非X11,这带来了很多新体验，也带来了许多渲染问题。<br>此文中，我将逐步说明如何配置一个完美的Discord，运行在Wayland中。</p>
-<blockquote>
-<p>注意：Flatpak安装的Discord无法进行硬件渲染，因此请不要使用。</p>
-</blockquote>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先通过 <a class="link"   href="https://discord.com/api/download/canary?platform=linux&format=tar.gz" >此地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 直接下载Discord官方提供的Canary tarball。<br>这是必要的前提条件。</p>
-<p>下载后解压，例如我解压到了 <code>~/Documents/DiscordCanary/</code></p>
-<h2 id="创建-desktop文件"><a href="#创建-desktop文件" class="headerlink" title="创建.desktop文件"></a>创建.desktop文件</h2><p>在 <code>~/.local/share/applications/discord-canary.desktop</code> 中创建一个文件，记得替换路径为你的解压路径：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Discord Canary (Wayland)</span><br><span class="line">Comment=Discord Canary with Wayland + Vulkan + NVENC + IME</span><br><span class="line">Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx DISCORD_ENABLE_WAYLAND=1 /home/zhongzi26/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --enable-wayland-ime --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br><span class="line">Icon=discord</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><p><code>chmod +x ~/Documents/DiscordCanary/DiscordCanary</code></p>
-<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>确保例如 ~&#x2F;.profile 或 ~&#x2F;.zshrc 等默认加载的配置中有以下环境变量：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LIBVA_DRIVER_NAME=nvidia</span><br><span class="line">export __GLX_VENDOR_LIBRARY_NAME=nvidia</span><br><span class="line">export GBM_BACKEND=nvidia-drm</span><br><span class="line">export MOZ_ENABLE_WAYLAND=1</span><br><span class="line">export XDG_SESSION_TYPE=wayland</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>我则是放在了 ~&#x2F;.profile 中</p>
-</blockquote>
-<hr>
-<h2 id="测试启动"><a href="#测试启动" class="headerlink" title="测试启动"></a>测试启动</h2><p>在终端中执行.desktop文件中Exec行的内容，观察应用是否正常工作。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br></pre></td></tr></table></figure></div>
-
-<p>若正常工作，重启并使用应用启动器再次尝试。（若出现如透明等渲染问题，尝试排除启动参数）</p>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先关闭Discord应用，包括后台进程。</p>
-<p>使用AUR包管理器安装vencord-installer包，并启动</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S vencord-installer</span><br><span class="line"></span><br><span class="line">vencordinstaller</span><br></pre></td></tr></table></figure></div>
-
-<p>在弹出的窗口中选择 Custom Install Location 将前面的解压目录写入其中，记得更换为你自己的。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary</span><br></pre></td></tr></table></figure></div>
-
-<p>若无报错，则可以启动Discord，点击设置查看是否有Vencord插件。</p>
 ]]></content>
       <categories>
         <category>教程</category>
