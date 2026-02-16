@@ -1,0 +1,20 @@
+/* Custom Font - Luoli Font v2 */
+@font-face {
+  font-family: 'LuoliFont';
+  src: url('../fonts/luoli-v2.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply the custom font to the entire website */
+body {
+  font-family: 'LuoliFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif !important;
+}
+
+/* Apply to specific elements if needed */
+.post-content,
+.post-title,
+article {
+  font-family: 'LuoliFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif !important;
+}
