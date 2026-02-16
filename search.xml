@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2023/05/23/hello,world!/</url>
-    <content><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p>
-<p>Front-matter示例：</p>
-<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你好，世界！</span><br><span class="line"><span class="built_in">date</span>: 2023-05-23 20:57:13</span><br><span class="line">updated: 2023-05-23 20:57:13</span><br><span class="line">tags: </span><br><span class="line">    - 建站</span><br><span class="line">categories: </span><br><span class="line">    - 建站</span><br><span class="line">description: 建站时，测试用的文章</span><br><span class="line">thumbnail: /images/default_cover.webp  <span class="comment">#首页缩略图、文章头图</span></span><br><span class="line">expires: 2023-08-31 23:59:59  <span class="comment">#超过本时间提示文章可能过时</span></span><br><span class="line"><span class="comment"># excerpt: &quot;这里是显示的摘要，可不填，自动生成&quot;</span></span><br><span class="line"><span class="comment"># sticky: 1 #数字越大文章越靠前</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微信与TG互通 基于EFB的ComWechat搭建教程</title>
     <url>/2023/10/04/efbwechattg/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
@@ -158,6 +144,20 @@
       </tags>
   </entry>
   <entry>
+    <title>你好，世界！</title>
+    <url>/2023/05/23/hello,world!/</url>
+    <content><![CDATA[<h1 id="网站基本说明"><a href="#网站基本说明" class="headerlink" title="网站基本说明"></a>网站基本说明</h1><p>2023年5月23日 20:00，本站正式建立，使用Github Page作为服务提供商。<br>本站属于个人性质网站，不存在主动盈利行为。</p>
+<p>Front-matter示例：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 你好，世界！</span><br><span class="line"><span class="built_in">date</span>: 2023-05-23 20:57:13</span><br><span class="line">updated: 2023-05-23 20:57:13</span><br><span class="line">tags: </span><br><span class="line">    - 建站</span><br><span class="line">categories: </span><br><span class="line">    - 建站</span><br><span class="line">description: 建站时，测试用的文章</span><br><span class="line">thumbnail: /images/default_cover.webp  <span class="comment">#首页缩略图、文章头图</span></span><br><span class="line">expires: 2023-08-31 23:59:59  <span class="comment">#超过本时间提示文章可能过时</span></span><br><span class="line"><span class="comment"># excerpt: &quot;这里是显示的摘要，可不填，自动生成&quot;</span></span><br><span class="line"><span class="comment"># sticky: 1 #数字越大文章越靠前</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ArchLinux下安装带浏览器源的OBS</title>
     <url>/2023/10/12/linuxobsbrowser/</url>
     <content><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote>
@@ -176,96 +176,6 @@
 <p>安装其中第一个版本的话：提供linuxbrowser旧插件。该插件可与默认客户端一起使用，但已被放弃且过时。</p>
 <p>安装其中第二个版本的话：编译可能要很久(大约10分钟)。</p>
 <p>参考：ArchLinux的<a class="link"   href="https://wiki.archlinuxcn.org/wiki/Open_Broadcaster_Software" >Wiki页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何配置一个简单实用且干净的zsh</title>
-    <url>/2025/07/09/zshconfig/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文仅配置附带三个简单的实用功能插件的 zsh 。</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先安装 <strong>zsh</strong> 并切换默认 Shell 至 <strong>&#x2F;bin&#x2F;zsh</strong></p>
-<blockquote>
-<p>可通过<code> chsh -l</code>查看所有可用的 Shell</p>
-</blockquote>
-<p>若安装了 <strong>oh-my-zsh</strong> 请先卸载</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">uninstall_oh_my_zsh</span><br></pre></td></tr></table></figure></div>
-
-<hr>
-<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="编辑-zshrc"><a href="#编辑-zshrc" class="headerlink" title="编辑 .zshrc"></a>编辑 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">### ZSH HOME</span><br><span class="line">export ZSH=$HOME/.zsh</span><br><span class="line"></span><br><span class="line">### ---- history config ----------</span><br><span class="line">export HISTFILE=$ZSH/.zsh_history</span><br><span class="line"></span><br><span class="line"># How many commands zsh will load to memory.</span><br><span class="line">export HISTSIZE=10000</span><br><span class="line"></span><br><span class="line"># How maney commands history will save on file.</span><br><span class="line">export SAVEHIST=10000</span><br><span class="line"></span><br><span class="line"># History won&#x27;t save duplicates.</span><br><span class="line">setopt HIST_IGNORE_ALL_DUPS</span><br><span class="line"></span><br><span class="line"># History won&#x27;t show duplicates on search.</span><br><span class="line">setopt HIST_FIND_NO_DUPS</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd .zsh/plugins</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zdharma-continuum/fast-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-autosuggestions.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-completions.git</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>若此处报错请自行配置公钥，或更换HTTPS方式clone</p>
-</blockquote>
-<h2 id="继续添加配置到-zshrc"><a href="#继续添加配置到-zshrc" class="headerlink" title="继续添加配置到 .zshrc"></a>继续添加配置到 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh</span><br><span class="line">fpath=($ZSH/plugins/zsh-completions/src $fpath)</span><br><span class="line"></span><br><span class="line"># zsh-autosuggestions:config</span><br><span class="line">source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#647696,underline&quot;</span><br><span class="line">ZSH_AUTOSUGGEST_STRATEGY=(history completion)</span><br><span class="line">ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20</span><br><span class="line"></span><br><span class="line">export PROMPT=&#x27;[%n]$ &#x27;</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="创建符号链接"><a href="#创建符号链接" class="headerlink" title="创建符号链接"></a>创建符号链接</h2><p>先删除家目录下的 <strong>.zshrc</strong> 文件</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm ~/.zshrc</span><br></pre></td></tr></table></figure></div>
-
-<p>创建符号链接</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s ~/.zsh/.zshrc ~/.zshrc</span><br></pre></td></tr></table></figure></div>
-<hr>
-<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/zshpreview.png"
-                     
-                ></p>
-<hr>
-<h2 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h2><p><strong>三个 Plugins 对应的 repository</strong></p>
-<p><a class="link"   href="https://github.com/zdharma-continuum/fast-syntax-highlighting" >https://github.com/zdharma-continuum/fast-syntax-highlighting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><a class="link"   href="https://github.com/zsh-users/zsh-autosuggestions" >https://github.com/zsh-users/zsh-autosuggestions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><a class="link"   href="https://github.com/zsh-users/zsh-completions" >https://github.com/zsh-users/zsh-completions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在Wayland下制作一个完美的Discord</title>
-    <url>/2025/07/21/waylanddc/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间更换到了ArchLinux+Hyprland的环境，渲染使用Wayland而非X11,这带来了很多新体验，也带来了许多渲染问题。<br>此文中，我将逐步说明如何配置一个完美的Discord，运行在Wayland中。</p>
-<blockquote>
-<p>注意：Flatpak安装的Discord无法进行硬件渲染，因此请不要使用。</p>
-</blockquote>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先通过 <a class="link"   href="https://discord.com/api/download/canary?platform=linux&format=tar.gz" >此地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 直接下载Discord官方提供的Canary tarball。<br>这是必要的前提条件。</p>
-<p>下载后解压，例如我解压到了 <code>~/Documents/DiscordCanary/</code></p>
-<h2 id="创建-desktop文件"><a href="#创建-desktop文件" class="headerlink" title="创建.desktop文件"></a>创建.desktop文件</h2><p>在 <code>~/.local/share/applications/discord-canary.desktop</code> 中创建一个文件，记得替换路径为你的解压路径：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Discord Canary (Wayland)</span><br><span class="line">Comment=Discord Canary with Wayland + Vulkan + NVENC + IME</span><br><span class="line">Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx DISCORD_ENABLE_WAYLAND=1 /home/zhongzi26/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --enable-wayland-ime --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br><span class="line">Icon=discord</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure></div>
-
-<h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><p><code>chmod +x ~/Documents/DiscordCanary/DiscordCanary</code></p>
-<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>确保例如 ~&#x2F;.profile 或 ~&#x2F;.zshrc 等默认加载的配置中有以下环境变量：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LIBVA_DRIVER_NAME=nvidia</span><br><span class="line">export __GLX_VENDOR_LIBRARY_NAME=nvidia</span><br><span class="line">export GBM_BACKEND=nvidia-drm</span><br><span class="line">export MOZ_ENABLE_WAYLAND=1</span><br><span class="line">export XDG_SESSION_TYPE=wayland</span><br></pre></td></tr></table></figure></div>
-
-<blockquote>
-<p>我则是放在了 ~&#x2F;.profile 中</p>
-</blockquote>
-<hr>
-<h2 id="测试启动"><a href="#测试启动" class="headerlink" title="测试启动"></a>测试启动</h2><p>在终端中执行.desktop文件中Exec行的内容，观察应用是否正常工作。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br></pre></td></tr></table></figure></div>
-
-<p>若正常工作，重启并使用应用启动器再次尝试。（若出现如透明等渲染问题，尝试排除启动参数）</p>
-<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先关闭Discord应用，包括后台进程。</p>
-<p>使用AUR包管理器安装vencord-installer包，并启动</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S vencord-installer</span><br><span class="line"></span><br><span class="line">vencordinstaller</span><br></pre></td></tr></table></figure></div>
-
-<p>在弹出的窗口中选择 Custom Install Location 将前面的解压目录写入其中，记得更换为你自己的。</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary</span><br></pre></td></tr></table></figure></div>
-
-<p>若无报错，则可以启动Discord，点击设置查看是否有Vencord插件。</p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -335,6 +245,96 @@
       </categories>
       <tags>
         <tag>研究</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在Wayland下制作一个完美的Discord</title>
+    <url>/2025/07/21/waylanddc/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间更换到了ArchLinux+Hyprland的环境，渲染使用Wayland而非X11,这带来了很多新体验，也带来了许多渲染问题。<br>此文中，我将逐步说明如何配置一个完美的Discord，运行在Wayland中。</p>
+<blockquote>
+<p>注意：Flatpak安装的Discord无法进行硬件渲染，因此请不要使用。</p>
+</blockquote>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先通过 <a class="link"   href="https://discord.com/api/download/canary?platform=linux&format=tar.gz" >此地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 直接下载Discord官方提供的Canary tarball。<br>这是必要的前提条件。</p>
+<p>下载后解压，例如我解压到了 <code>~/Documents/DiscordCanary/</code></p>
+<h2 id="创建-desktop文件"><a href="#创建-desktop文件" class="headerlink" title="创建.desktop文件"></a>创建.desktop文件</h2><p>在 <code>~/.local/share/applications/discord-canary.desktop</code> 中创建一个文件，记得替换路径为你的解压路径：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=Discord Canary (Wayland)</span><br><span class="line">Comment=Discord Canary with Wayland + Vulkan + NVENC + IME</span><br><span class="line">Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx SDL_IM_MODULE=fcitx DISCORD_ENABLE_WAYLAND=1 /home/zhongzi26/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --enable-wayland-ime --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br><span class="line">Icon=discord</span><br><span class="line">Type=Application</span><br><span class="line">Categories=Network;InstantMessaging;</span><br><span class="line">StartupNotify=true</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="赋予执行权限"><a href="#赋予执行权限" class="headerlink" title="赋予执行权限"></a>赋予执行权限</h2><p><code>chmod +x ~/Documents/DiscordCanary/DiscordCanary</code></p>
+<h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>确保例如 ~&#x2F;.profile 或 ~&#x2F;.zshrc 等默认加载的配置中有以下环境变量：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LIBVA_DRIVER_NAME=nvidia</span><br><span class="line">export __GLX_VENDOR_LIBRARY_NAME=nvidia</span><br><span class="line">export GBM_BACKEND=nvidia-drm</span><br><span class="line">export MOZ_ENABLE_WAYLAND=1</span><br><span class="line">export XDG_SESSION_TYPE=wayland</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>我则是放在了 ~&#x2F;.profile 中</p>
+</blockquote>
+<hr>
+<h2 id="测试启动"><a href="#测试启动" class="headerlink" title="测试启动"></a>测试启动</h2><p>在终端中执行.desktop文件中Exec行的内容，观察应用是否正常工作。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary --ozone-platform=wayland --use-vulkan --disable-features=WebRtcAllowInputVolumeAdjustment --enable-features=VaapiIgnoreDriverChecks,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoEncoder</span><br></pre></td></tr></table></figure></div>
+
+<p>若正常工作，重启并使用应用启动器再次尝试。（若出现如透明等渲染问题，尝试排除启动参数）</p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>首先关闭Discord应用，包括后台进程。</p>
+<p>使用AUR包管理器安装vencord-installer包，并启动</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">yay -S vencord-installer</span><br><span class="line"></span><br><span class="line">vencordinstaller</span><br></pre></td></tr></table></figure></div>
+
+<p>在弹出的窗口中选择 Custom Install Location 将前面的解压目录写入其中，记得更换为你自己的。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">~/Documents/DiscordCanary/DiscordCanary</span><br></pre></td></tr></table></figure></div>
+
+<p>若无报错，则可以启动Discord，点击设置查看是否有Vencord插件。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何配置一个简单实用且干净的zsh</title>
+    <url>/2025/07/09/zshconfig/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然在 oh-my-zsh 是 zsh 最著名的扩展，但其添加了相当多我用不到的内容，这可能导致终端启动带有延迟，以及一些我不喜欢的高亮等等。<br>并且，我个人更加喜欢自己定义的内容，因此有了此文。此文仅配置附带三个简单的实用功能插件的 zsh 。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>请先安装 <strong>zsh</strong> 并切换默认 Shell 至 <strong>&#x2F;bin&#x2F;zsh</strong></p>
+<blockquote>
+<p>可通过<code> chsh -l</code>查看所有可用的 Shell</p>
+</blockquote>
+<p>若安装了 <strong>oh-my-zsh</strong> 请先卸载</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">uninstall_oh_my_zsh</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="创建配置文件夹"><a href="#创建配置文件夹" class="headerlink" title="创建配置文件夹"></a>创建配置文件夹</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p .zsh/plugins</span><br><span class="line">cp .zshrc .zsh/</span><br><span class="line">mv .zsh_history .zsh/</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="编辑-zshrc"><a href="#编辑-zshrc" class="headerlink" title="编辑 .zshrc"></a>编辑 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">### ZSH HOME</span><br><span class="line">export ZSH=$HOME/.zsh</span><br><span class="line"></span><br><span class="line">### ---- history config ----------</span><br><span class="line">export HISTFILE=$ZSH/.zsh_history</span><br><span class="line"></span><br><span class="line"># How many commands zsh will load to memory.</span><br><span class="line">export HISTSIZE=10000</span><br><span class="line"></span><br><span class="line"># How maney commands history will save on file.</span><br><span class="line">export SAVEHIST=10000</span><br><span class="line"></span><br><span class="line"># History won&#x27;t save duplicates.</span><br><span class="line">setopt HIST_IGNORE_ALL_DUPS</span><br><span class="line"></span><br><span class="line"># History won&#x27;t show duplicates on search.</span><br><span class="line">setopt HIST_FIND_NO_DUPS</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd .zsh/plugins</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zdharma-continuum/fast-syntax-highlighting.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-autosuggestions.git</span><br><span class="line"></span><br><span class="line">git clone git@github.com:zsh-users/zsh-completions.git</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>若此处报错请自行配置公钥，或更换HTTPS方式clone</p>
+</blockquote>
+<h2 id="继续添加配置到-zshrc"><a href="#继续添加配置到-zshrc" class="headerlink" title="继续添加配置到 .zshrc"></a>继续添加配置到 .zshrc</h2><p><strong>如果直接使用本仓库的文件的话，默认已经设置完毕</strong></p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh</span><br><span class="line">fpath=($ZSH/plugins/zsh-completions/src $fpath)</span><br><span class="line"></span><br><span class="line"># zsh-autosuggestions:config</span><br><span class="line">source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line">ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#647696,underline&quot;</span><br><span class="line">ZSH_AUTOSUGGEST_STRATEGY=(history completion)</span><br><span class="line">ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20</span><br><span class="line"></span><br><span class="line">export PROMPT=&#x27;[%n]$ &#x27;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="创建符号链接"><a href="#创建符号链接" class="headerlink" title="创建符号链接"></a>创建符号链接</h2><p>先删除家目录下的 <strong>.zshrc</strong> 文件</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm ~/.zshrc</span><br></pre></td></tr></table></figure></div>
+
+<p>创建符号链接</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s ~/.zsh/.zshrc ~/.zshrc</span><br></pre></td></tr></table></figure></div>
+<hr>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/zshpreview.png"
+                     
+                ></p>
+<hr>
+<h2 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h2><p><strong>三个 Plugins 对应的 repository</strong></p>
+<p><a class="link"   href="https://github.com/zdharma-continuum/fast-syntax-highlighting" >https://github.com/zdharma-continuum/fast-syntax-highlighting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   href="https://github.com/zsh-users/zsh-autosuggestions" >https://github.com/zsh-users/zsh-autosuggestions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   href="https://github.com/zsh-users/zsh-completions" >https://github.com/zsh-users/zsh-completions<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
